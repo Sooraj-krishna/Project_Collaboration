@@ -9,9 +9,9 @@ const Footer = () => {
         <div className="flex flex-col gap-4 md:items-start items-center">
           <div className="text-white font-bold text-2xl md:text-[26px]">Logo</div>
           <div className="flex flex-wrap gap-4 lg:gap-10 text-white text-sm lg:text-base">
-            <Link href="/" className="hover:underline">Home</Link>
-            <Link href="/" className="hover:underline">Contact Us</Link>
-            <Link href="/" className="hover:underline">Repeto</Link>
+            <Link href="/Hero" className="hover:underline">Home</Link>
+            <Link href="/Contact" className="hover:underline">Contact Us</Link>
+            <Link href="/repeto" className="hover:underline">Repeto</Link>
             <Link href="/" className="hover:underline">Whatsapp</Link>
             <Link href="/" className="hover:underline">LinkedIn</Link>
           </div>

@@ -24,9 +24,9 @@ const Navbar = () => {
 
         {/* Links for Desktop */}
         <div className="hidden md:flex justify-around gap-8 text-[17.5px] font-inter text-black">
-          <Link href="/">Home</Link>
-          <Link href="/">Campus</Link>
-          <Link href="/">Calendar</Link>
+          <Link href="/Home">Home</Link>
+          <Link href="/Gallery">Gallery</Link>
+          <Link href="/Calender">Calendar</Link>
 
           <div className="relative">
             <button
@@ -51,22 +51,22 @@ const Navbar = () => {
             {dropdownOpen && (
               <div className="absolute mt-2 w-40 bg-white border rounded-md shadow-lg z-50">
                 <Link
-                  href="/option1"
+                  href="/Newsletter"
                   className="block px-4 py-2 text-black hover:bg-gray-100"
                 >
-                  Option 1
+                  Newsletter
                 </Link>
                 <Link
-                  href="/option2"
+                  href="/Introduction"
                   className="block px-4 py-2 text-black hover:bg-gray-100"
                 >
-                  Option 2
+                  Introduction
                 </Link>
                 <Link
-                  href="/option3"
+                  href="/Reviews"
                   className="block px-4 py-2 text-black hover:bg-gray-100"
                 >
-                  Option 3
+                  Reviews
                 </Link>
               </div>
             )}

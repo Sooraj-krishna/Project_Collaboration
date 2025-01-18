@@ -2,11 +2,12 @@
 
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from 'next/image';
 
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(2);
-  const [direction, setDirection] = useState(0);
-
+  // Removed unused direction state since it's not being used in the component
+  
   const Imgs = [
     { id: 1, img: "/AI.jpeg" },
     { id: 2, img: "/AI.jpeg" },
@@ -16,12 +17,10 @@ const Gallery = () => {
   ];
 
   const nextSlide = () => {
-    setDirection(1);
     setCurrentIndex((prev) => (prev + 1) % Imgs.length);
   };
 
   const prevSlide = () => {
-    setDirection(-1);
     setCurrentIndex((prev) => (prev - 1 + Imgs.length) % Imgs.length);
   };
 
@@ -54,7 +53,7 @@ const Gallery = () => {
         <div className="relative h-full flex items-center justify-center">
           {getVisibleItems().map((item) => {
             const position = item.position;
-            let zIndex = 5 - Math.abs(position);
+            const zIndex = 5 - Math.abs(position); // Changed to const
             let opacity, scale, translateX;
 
             if (Math.abs(position) === 0) {
@@ -82,8 +81,11 @@ const Gallery = () => {
                 }}
               >
                 <div className="relative rounded-lg overflow-hidden shadow-lg">
-                  <img
+                  <Image
                     src={item.img}
+                    alt={`Gallery image ${item.id}`}
+                    width={400}
+                    height={400}
                     className="h-[200px] md:h-[400px] w-full object-contain"
                   />
                 </div>

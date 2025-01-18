@@ -1,0 +1,89 @@
+{
+    "scholarships": [
+      {
+        "id": "SCH001",
+        "title": "Reliance Foundation Scholarship",
+        "type": "Scholarship",
+        "department": ["CSE", "IT", "ECE"],
+        "courseLevel": ["UG"],
+        "exclusive": "All",
+        "year": ["2nd year"],
+        "lastDateToApply": "2025-06-10",
+        "stipend": "6 Lakhs",
+        "eligibility": "2nd Years Only",
+        "description": "The Reliance Foundation Scholarship program aims to support meritorious students in pursuing their higher education in technology and engineering fields.",
+        "requirements": [
+          "Minimum CGPA of 8.0",
+          "No active backlogs",
+          "Family income below 8 lakhs per annum"
+        ],
+        "applicationLink": "https://reliancefoundation.org/scholarship",
+        "category": "Latest",
+        "postedDate": "2024-01-15"
+      },
+      {
+        "id": "SCH002",
+        "title": "Women Techmakers Fellowship",
+        "type": "Scholarship",
+        "department": ["CSE", "IT", "ECE", "EEE"],
+        "courseLevel": ["UG", "PG"],
+        "exclusive": "Women",
+        "year": ["2nd year", "3rd year", "4th year"],
+        "lastDateToApply": "2025-03-15",
+        "stipend": "4 Lakhs",
+        "eligibility": "Female Students Only",
+        "description": "Google's Women Techmakers program provides scholarships to women studying computer science, computer engineering, or closely related technical fields.",
+        "requirements": [
+          "Strong academic performance",
+          "Leadership qualities",
+          "Active participation in computer science-related activities"
+        ],
+        "applicationLink": "https://www.womentechmakers.com/scholars",
+        "category": "Recommended",
+        "postedDate": "2024-01-12"
+      },
+      {
+        "id": "SCH003",
+        "title": "AICTE Smart India Fellowship",
+        "type": "Scholarship",
+        "department": ["CSE", "IT", "ECE", "EEE", "MECH", "CIVIL"],
+        "courseLevel": ["UG"],
+        "exclusive": "All",
+        "year": ["3rd year"],
+        "lastDateToApply": "2025-03-01",
+        "stipend": "12,000 per month",
+        "eligibility": "3rd Year Students with Innovation Projects",
+        "description": "Fellowship program for students working on innovative projects that solve real-world problems.",
+        "requirements": [
+          "Innovative project idea",
+          "Letter of recommendation",
+          "CGPA > 7.5"
+        ],
+        "applicationLink": "https://aicte.gov.in/fellowship",
+        "category": "Recommended",
+        "postedDate": "2024-01-14"
+      },
+      {
+        "id": "SCH004",
+        "title": "UNESCO Women in Science Fellowship",
+        "type": "Scholarship",
+        "department": ["CSE", "IT", "ECE", "EEE", "MECH", "CIVIL"],
+        "courseLevel": ["PG", "PHD"],
+        "exclusive": "Women",
+        "year": ["others"],
+        "lastDateToApply": "2025-06-30",
+        "stipend": "15 Lakhs",
+        "eligibility": "Female PG/PhD Students",
+        "description": "Fellowship program to support women researchers in STEM fields.",
+        "requirements": [
+          "Research proposal",
+          "Academic excellence",
+          "Letter of recommendation"
+        ],
+        "applicationLink": "https://unesco.org/women-in-science",
+        "category": "Recommended",
+        "postedDate": "2024-01-16"
+      }
+    ]
+  }
+  
