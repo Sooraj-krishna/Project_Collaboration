@@ -41,7 +41,7 @@ const Newsletter = () => {
       {/* Image Section */}
       <div className="w-full lg:w-[500px] h-[300px] md:h-[400px] lg:flex justify-center items-center hidden">
         <Image
-          src="/Mailimg.png"
+          src="./Mailimg.png"
           alt="Newsletter Illustration"
           width={500}
           height={400}
