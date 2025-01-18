@@ -46,6 +46,7 @@ const Newsletter = () => {
           width={500}
           height={400}
           className="object-contain w-full h-full max-w-[400px] lg:max-w-[500px]"
+          unoptimized
         />
       </div>
     </div>
