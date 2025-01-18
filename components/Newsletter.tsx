@@ -42,10 +42,10 @@ const Newsletter = () => {
       <div className="w-full lg:w-[500px] h-[300px] md:h-[400px] lg:flex justify-center items-center hidden">
         <Image
           src="/Mailimg.png"
-{/*           alt="Newsletter Illustration"
+          alt="Newsletter Illustration"
           width={500}
           height={400}
-          className="object-contain w-full h-full max-w-[400px] lg:max-w-[500px]" */}
+          className="object-contain w-full h-full max-w-[400px] lg:max-w-[500px]"
           unoptimized
         />
       </div>
