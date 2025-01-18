@@ -24,7 +24,7 @@ const Navbar = () => {
 
         {/* Links for Desktop */}
         <div className="hidden md:flex justify-around gap-8 text-[17.5px] font-inter text-black">
-          <Link href="/Home">Home</Link>
+          <Link href="/">Home</Link>
           <Link href="/Gallery">Gallery</Link>
           <Link href="/Calender">Calendar</Link>
 
