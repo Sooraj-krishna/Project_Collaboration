@@ -7,7 +7,7 @@ const Calendar = () => {
     <div className="bg-[#27272A] h-auto sm:h-[450px] flex flex-col sm:flex-row p-6 gap-28 items-center justify-center flex-1 relative overflow-x-clip" >
       <div className="w-[500px] h-[400px] lg:flex hidden justify-center mt-8 sm:mt-0">
         <Image
-          src="/Mailimg.png"
+          src="./images/Mailimg.png"
           alt="Newsletter Illustration"
           width={500}
           height={400}
