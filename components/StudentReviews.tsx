@@ -64,7 +64,7 @@ const StudentReviews = () => {
             <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-black" />
           </button>
 
-          <div className="flex justify-center items-center gap-4 md:gap-8 overflow-hidden text-shadow-xl px-24">
+          <div className="flex justify-center items-center gap-4 md:gap-8 overflow-hidden text-shadow-xl md:px-24 px-12">
             {[-1, 0, 1].map((offset) => {
               const index =
                 (currentIndex + offset + reviews.length) % reviews.length;
@@ -73,7 +73,7 @@ const StudentReviews = () => {
               return (
                 <div
                   key={review.id}
-                  className={`bg-transparent border-2 border-gray-200 p-6 md:p-8 rounded-lg transition-all duration-0 lg:w-full ${
+                  className={`bg-transparent border-2 border-gray-200 p-4 md:p-8 rounded-lg transition-all duration-0 lg:w-full ${
                     isActive ? "opacity-100" : "opacity-50"
                   } ${
                     Math.abs(offset) === 1
@@ -81,7 +81,7 @@ const StudentReviews = () => {
                       : "block text-center"
                   }`}
                 >
-                  <p className="text-white mb-4 md:mb-6 text-[18px] leading-relaxed">
+                  <p className="text-white mb-4 md:mb-6 text-[13px] md:text-[18px] leading-relaxed">
                     &quot;{review.text}&quot;
                   </p>
                   <div className="flex items-center gap-3 md:gap-4">

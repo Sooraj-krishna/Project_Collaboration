@@ -4,9 +4,9 @@ import React from "react";
 const Whoweare = () => {
   return (
     <div className="bg-[#27272A] w-full h-auto md:p-20 p-14 flex flex-col md:flex-row relative overflow-x-clip gap-8">
-      <div className="w-full md:hidden z-20">
+      <div className="w-full  md:hidden z-20">
         <Image
-          src="/AI.jpeg"
+          src="./images/AI.jpeg"
           alt="AI representation"
           width={500}
           height={500}
@@ -40,7 +40,7 @@ const Whoweare = () => {
       </div>
       <div className="z-20 hidden lg:block md:hidden">
         <Image
-          src="/AI.jpeg"
+          src="./images/AI.jpeg"
           alt="AI representation"
           width={500}
           height={500}

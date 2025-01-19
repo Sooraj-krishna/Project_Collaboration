@@ -9,11 +9,11 @@ const Gallery = () => {
   // Removed unused direction state since it's not being used in the component
   
   const Imgs = [
-    { id: 1, img: "/AI.jpeg" },
-    { id: 2, img: "/AI.jpeg" },
-    { id: 3, img: "/AI.jpeg" },
-    { id: 4, img: "/AI.jpeg" },
-    { id: 5, img: "/AI.jpeg" },
+    { id: 1, img: "./images/AI.jpeg" },
+    { id: 2, img: "./images/AI.jpeg" },
+    { id: 3, img: "./images/AI.jpeg" },
+    { id: 4, img: "./images/AI.jpeg" },
+    { id: 5, img: "./images/AI.jpeg" },
   ];
 
   const nextSlide = () => {
@@ -80,13 +80,13 @@ const Gallery = () => {
                   opacity: opacity,
                 }}
               >
-                <div className="relative rounded-lg overflow-hidden shadow-lg">
+                <div className="relative border-2 border-black rounded-lg overflow-hidden shadow-lg">
                   <Image
                     src={item.img}
                     alt={`Gallery image ${item.id}`}
                     width={400}
                     height={400}
-                    className="h-[200px] md:h-[400px] w-full object-contain"
+                    className="h-[200px] md:h-[400px] w-full object-cover"
                   />
                 </div>
               </div>
