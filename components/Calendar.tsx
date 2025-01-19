@@ -1,5 +1,6 @@
 import React from "react";
 import Image from 'next/image'; // Add this import
+import Link from "next/link";
 
 const Calendar = () => {
   return (
@@ -21,7 +22,10 @@ const Calendar = () => {
           and subscribe
         </p>
         <div className="w-[137px] h-[45px] bg-[#ffffff] md:mt-10 rounded-2xl text-black  flex justify-center items-center text-[18.5px] hover:text-white hover:bg-black  drop-shadow-lg font-medium">
-          <button>See Calendar</button>
+          <button> <Link
+            href="https://embed.styledcalendar.com/#DbwkO489CQPU02RTOVG6"
+            passHref
+          >See Calendar</Link></button>
         </div>
       </div>
       <div className="w-[180px] lg:w-[200px] h-[400px] lg:h-[430.32px] bg-gradient-to-t to-[#2CB1CF] from-[#1D7589] shadow-2xl shadow-black z-10 absolute lg:top-0 lg:left-[909.03px] md:top-[20px] md:left-[500.03px] -top-[20px] left-[80px] transform -rotate-[36.17deg]"></div>

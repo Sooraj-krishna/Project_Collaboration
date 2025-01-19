@@ -33,7 +33,7 @@ const Whoweare = () => {
           <li>Find online hackathons and open source projects </li>
         </ul>
         <button>
-          <div className="w-[137px] h-[45px] bg-[#ffffff] mt-10 rounded-2xl text-black font-davidLibre flex justify-center items-center text-[18.5px] hover:text-white hover:bg-black drop-shadow-lg">
+          <div className="w-[137px] h-[45px] bg-[#ffffff] mt-10 rounded-2xl text-black font-davidLibre flex justify-center items-center text-[18.5px] hover:text-white font-medium hover:bg-black drop-shadow-lg">
             About us
           </div>
         </button>
