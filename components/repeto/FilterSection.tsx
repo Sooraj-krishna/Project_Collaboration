@@ -17,24 +17,24 @@ export default function FilterSection({ onFilterSubmit }: FilterSectionProps) {
 
   const filters: FilterOption[] = [
     {
-      title: "Opportunity",
-      options: ["Internship", "Research", "Hackathon", "Scholarship", "Others"]
+      title: "Project Type",
+      options: ["Final year project ", "Mini Project", "Research project", "Personal project", "Others"]
     },
     {
       title: "Department",
-      options: ["CSE", "IT", "EEE", "ECE", "MECH", "CIVIL"]
+      options: ["CSE", "IT", "EEE", "ECE", "MECH", "CIVIL", "Others"]
     },
     {
       title: "Course Level",
       options: ["UG", "PG", "PHD"]
     },
     {
-      title: "Exclusive",
-      options: ["Men", "Women", "Others"]
+      title: "Year of submission",
+      options: ["2025", "2024", "2023"]
     },
     {
-      title: "Year",
-      options: ["1st year", "2nd year", "3rd year", "4th year", "5th year", "others"]
+      title: "Domain",
+      options: ["Softwere", "Embedded System and iot", "Manfacturing", "civil ", "communication", "others"]
     }
   ];
 

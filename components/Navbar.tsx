@@ -19,17 +19,17 @@ const Navbar = () => {
       <div className="max-w-screen-xl flex items-center md:justify-between mx-auto py-5">
         {/* Logo Section */}
         <div className="flex flex-row font-poppins font-bold text-[26px] z-10 items-center relative text-black">
-          Logo
+          GecianArchive
         </div>
 
         {/* Links for Desktop */}
         <div className="hidden md:flex justify-around gap-8 text-[17.5px] font-inter text-black">
-          <Link href="/">Home</Link>
+          {/* <Link href="/">Home</Link>
           <Link href="/Gallery">Gallery</Link>
-          <Link href="/Calender">Calendar</Link>
+          <Link href="/Calender">Calendar</Link> */}
 
           <div className="relative">
-            <button
+            {/* <button
               onClick={toggleDropdown}
               className="flex items-center focus:outline-none"
             >
@@ -46,7 +46,7 @@ const Navbar = () => {
                   clipRule="evenodd"
                 />
               </svg>
-            </button>
+            </button> */}
 
             {dropdownOpen && (
               <div className="absolute mt-2 w-40 bg-white border rounded-md shadow-lg z-50">
@@ -96,7 +96,7 @@ const Navbar = () => {
         <button>
         <Link href="/repeto">
           <div className="w-[117px] h-[45px] bg-[#000000] rounded-3xl text-white font-davidLibre hidden md:flex justify-center items-center text-[15.5px] hover:bg-white drop-shadow-lg hover:text-black">
-            Repeto
+            Login
           </div>
         </Link>
         </button>
@@ -163,7 +163,7 @@ const Navbar = () => {
         <button>
         <Link href="/repeto">
           <div className="w-[117px] h-[45px] bg-[#000000] rounded-3xl text-white font-davidLibre flex justify-center items-center text-[15.5px] hover:bg-white drop-shadow-lg hover:text-black">
-          Repeto
+          Login
           </div>
         </Link>
         </button>

@@ -1,67 +1,67 @@
 {
-    "internships": [
-      {
-        "id": "INT001",
-        "title": "Google Summer Internship",
-        "type": "Internship",
-        "department": ["CSE", "IT"],
-        "courseLevel": ["UG"],
-        "exclusive": "All",
-        "year": ["3rd year", "4th year"],
-        "lastDateToApply": "2025-02-28",
-        "stipend": "1.5 Lakhs per month",
-        "eligibility": "3rd & 4th Years",
-        "description": "Summer internship opportunity at Google focusing on software development and engineering practices.",
-        "requirements": [
-          "Strong programming skills in any language",
-          "Data Structures and Algorithms",
-          "Minimum CGPA of 7.5"
-        ],
-        "applicationLink": "https://careers.google.com/students",
-        "category": "Popular",
-        "postedDate": "2024-01-10"
-      },
-      {
-        "id": "INT002",
-        "title": "Amazon SDE Internship",
-        "type": "Internship",
-        "department": ["CSE", "IT"],
-        "courseLevel": ["UG"],
-        "exclusive": "All",
-        "year": ["3rd year"],
-        "lastDateToApply": "2025-03-30",
-        "stipend": "1.25 Lakhs per month",
-        "eligibility": "3rd Year Students",
-        "description": "6-month internship opportunity with Amazon's retail tech team, working on real-world e-commerce solutions.",
-        "requirements": [
-          "CGPA > 7.0",
-          "Strong problem-solving skills",
-          "Knowledge of web technologies"
-        ],
-        "applicationLink": "https://amazon.jobs/intern",
-        "category": "Fortune 100",
-        "postedDate": "2024-01-16"
-      },
-      {
-        "id": "INT003",
-        "title": "Mercedes-Benz Mechanical Design Internship",
-        "type": "Internship",
-        "department": ["MECH"],
-        "courseLevel": ["UG", "PG"],
-        "exclusive": "All",
-        "year": ["3rd year", "4th year"],
-        "lastDateToApply": "2025-04-30",
-        "stipend": "80,000 per month",
-        "eligibility": "Mechanical Engineering Students",
-        "description": "Internship opportunity in automotive design and manufacturing at Mercedes-Benz Research India.",
-        "requirements": [
-          "Knowledge of CAD/CAM",
-          "Understanding of automotive systems",
-          "Good analytical skills"
-        ],
-        "applicationLink": "https://mercedes-benz.careers/india",
-        "category": "Fortune 100",
-        "postedDate": "2024-01-13"
-      }
-    ]
-  }
+  "internships": [
+    {
+      "id": "PROJ001",
+      "title": "Autonomous Drone for Industrial Inspection",
+      "type": "Mechanical & Robotics Project",
+      "department": ["MECH", "ECE", "CSE"],
+      "courseLevel": ["UG", "PG"],
+      "exclusive": "All",
+      "year": ["3rd year", "4th year"],
+      "lastDateToApply": "2025-02-28",
+      "stipend": "Project funding up to 1.5 Lakhs",
+      "eligibility": "3rd & 4th Year Students",
+      "description": "Develop an AI-powered autonomous drone for real-time inspection of industrial sites, integrating computer vision and advanced mechanics.",
+      "requirements": [
+        "Experience with CAD modeling",
+        "Knowledge of drone dynamics & AI integration",
+        "Proficiency in MATLAB or Python"
+      ],
+      "applicationLink": "https://autonomousdrone.in",
+      "category": "Popular",
+      "postedDate": "2024-01-10"
+    },
+    {
+      "id": "PROJ002",
+      "title": "Eco-Friendly Electric Bicycle",
+      "type": "Mechanical & Electrical Project",
+      "department": ["MECH", "EEE"],
+      "courseLevel": ["UG"],
+      "exclusive": "All",
+      "year": ["3rd year"],
+      "lastDateToApply": "2025-03-30",
+      "stipend": "Project funding up to 1.25 Lakhs",
+      "eligibility": "Mechanical & Electrical Engineering Students",
+      "description": "Design and develop an electric bicycle powered by renewable energy sources with smart features for urban commuting.",
+      "requirements": [
+        "Knowledge of battery management systems",
+        "Understanding of aerodynamics & lightweight materials",
+        "Proficiency in SolidWorks or AutoCAD"
+      ],
+      "applicationLink": "https://ecobike-project.com",
+      "category": "Fortune 100",
+      "postedDate": "2024-01-16"
+    },
+    {
+      "id": "PROJ003",
+      "title": "Automated Car Suspension System",
+      "type": "Mechanical Design Project",
+      "department": ["MECH"],
+      "courseLevel": ["UG", "PG"],
+      "exclusive": "All",
+      "year": ["3rd year", "4th year"],
+      "lastDateToApply": "2025-04-30",
+      "stipend": "Project funding up to 80,000",
+      "eligibility": "Mechanical Engineering Students",
+      "description": "Develop an advanced car suspension system that adapts to road conditions in real-time for enhanced vehicle stability and comfort.",
+      "requirements": [
+        "Proficiency in CAD/CAM modeling",
+        "Understanding of hydraulic & pneumatic systems",
+        "Good analytical and simulation skills"
+      ],
+      "applicationLink": "https://automatedsuspension.com",
+      "category": "Fortune 100",
+      "postedDate": "2024-01-13"
+    }
+  ]
+}

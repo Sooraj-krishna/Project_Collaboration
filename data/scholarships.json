@@ -1,89 +1,88 @@
 {
-    "scholarships": [
-      {
-        "id": "SCH001",
-        "title": "Reliance Foundation Scholarship",
-        "type": "Scholarship",
-        "department": ["CSE", "IT", "ECE"],
-        "courseLevel": ["UG"],
-        "exclusive": "All",
-        "year": ["2nd year"],
-        "lastDateToApply": "2025-06-10",
-        "stipend": "6 Lakhs",
-        "eligibility": "2nd Years Only",
-        "description": "The Reliance Foundation Scholarship program aims to support meritorious students in pursuing their higher education in technology and engineering fields.",
-        "requirements": [
-          "Minimum CGPA of 8.0",
-          "No active backlogs",
-          "Family income below 8 lakhs per annum"
-        ],
-        "applicationLink": "https://reliancefoundation.org/scholarship",
-        "category": "Latest",
-        "postedDate": "2024-01-15"
-      },
-      {
-        "id": "SCH002",
-        "title": "Women Techmakers Fellowship",
-        "type": "Scholarship",
-        "department": ["CSE", "IT", "ECE", "EEE"],
-        "courseLevel": ["UG", "PG"],
-        "exclusive": "Women",
-        "year": ["2nd year", "3rd year", "4th year"],
-        "lastDateToApply": "2025-03-15",
-        "stipend": "4 Lakhs",
-        "eligibility": "Female Students Only",
-        "description": "Google's Women Techmakers program provides scholarships to women studying computer science, computer engineering, or closely related technical fields.",
-        "requirements": [
-          "Strong academic performance",
-          "Leadership qualities",
-          "Active participation in computer science-related activities"
-        ],
-        "applicationLink": "https://www.womentechmakers.com/scholars",
-        "category": "Recommended",
-        "postedDate": "2024-01-12"
-      },
-      {
-        "id": "SCH003",
-        "title": "AICTE Smart India Fellowship",
-        "type": "Scholarship",
-        "department": ["CSE", "IT", "ECE", "EEE", "MECH", "CIVIL"],
-        "courseLevel": ["UG"],
-        "exclusive": "All",
-        "year": ["3rd year"],
-        "lastDateToApply": "2025-03-01",
-        "stipend": "12,000 per month",
-        "eligibility": "3rd Year Students with Innovation Projects",
-        "description": "Fellowship program for students working on innovative projects that solve real-world problems.",
-        "requirements": [
-          "Innovative project idea",
-          "Letter of recommendation",
-          "CGPA > 7.5"
-        ],
-        "applicationLink": "https://aicte.gov.in/fellowship",
-        "category": "Recommended",
-        "postedDate": "2024-01-14"
-      },
-      {
-        "id": "SCH004",
-        "title": "UNESCO Women in Science Fellowship",
-        "type": "Scholarship",
-        "department": ["CSE", "IT", "ECE", "EEE", "MECH", "CIVIL"],
-        "courseLevel": ["PG", "PHD"],
-        "exclusive": "Women",
-        "year": ["others"],
-        "lastDateToApply": "2025-06-30",
-        "stipend": "15 Lakhs",
-        "eligibility": "Female PG/PhD Students",
-        "description": "Fellowship program to support women researchers in STEM fields.",
-        "requirements": [
-          "Research proposal",
-          "Academic excellence",
-          "Letter of recommendation"
-        ],
-        "applicationLink": "https://unesco.org/women-in-science",
-        "category": "Recommended",
-        "postedDate": "2024-01-16"
-      }
-    ]
-  }
-  
+  "scholarships": [
+    {
+      "id": "PROJ001",
+      "title": "Smart Grid for Sustainable Energy Management",
+      "type": "Electrical & Electronics Project",
+      "department": ["EEE", "ECE"],
+      "courseLevel": ["UG"],
+      "exclusive": "All",
+      "year": ["2nd year"],
+      "lastDateToApply": "2025-06-10",
+      "stipend": "Project funding up to 6 Lakhs",
+      "eligibility": "2nd Year Students Only",
+      "description": "Develop a smart grid system integrating renewable energy sources for efficient power distribution and management.",
+      "requirements": [
+        "Basic knowledge of power systems",
+        "Microcontroller programming experience",
+        "Proficiency in MATLAB or Python"
+      ],
+      "applicationLink": "https://smartgridproject.in",
+      "category": "Latest",
+      "postedDate": "2024-01-15"
+    },
+    {
+      "id": "PROJ002",
+      "title": "IoT-Based Smart Traffic Management System",
+      "type": "Electronics & Communication Project",
+      "department": ["ECE", "EEE"],
+      "courseLevel": ["UG", "PG"],
+      "exclusive": "All",
+      "year": ["2nd year", "3rd year", "4th year"],
+      "lastDateToApply": "2025-03-15",
+      "stipend": "Project funding up to 4 Lakhs",
+      "eligibility": "UG & PG Students",
+      "description": "Develop an IoT-based system for real-time traffic monitoring and congestion control using AI and sensors.",
+      "requirements": [
+        "Experience with IoT and sensor networks",
+        "Basic knowledge of AI/ML algorithms",
+        "Proficiency in Python or C++"
+      ],
+      "applicationLink": "https://smarttrafficproject.com",
+      "category": "Recommended",
+      "postedDate": "2024-01-12"
+    },
+    {
+      "id": "PROJ003",
+      "title": "Wireless Power Transfer for Electric Vehicles",
+      "type": "Electrical Engineering Project",
+      "department": ["EEE"],
+      "courseLevel": ["UG"],
+      "exclusive": "All",
+      "year": ["3rd year"],
+      "lastDateToApply": "2025-03-01",
+      "stipend": "Project funding up to 12,000 per month",
+      "eligibility": "3rd Year Students with Innovative Projects",
+      "description": "Design and implement a wireless power transfer system for charging electric vehicles efficiently.",
+      "requirements": [
+        "Understanding of inductive power transfer",
+        "Basic circuit design skills",
+        "Simulation knowledge (MATLAB, Simulink)"
+      ],
+      "applicationLink": "https://wirelesschargingproject.com",
+      "category": "Recommended",
+      "postedDate": "2024-01-14"
+    },
+    {
+      "id": "PROJ004",
+      "title": "Earthquake-Resistant Smart Building Model",
+      "type": "Civil Engineering Project",
+      "department": ["CIVIL"],
+      "courseLevel": ["PG", "PHD"],
+      "exclusive": "All",
+      "year": ["others"],
+      "lastDateToApply": "2025-06-30",
+      "stipend": "Project funding up to 15 Lakhs",
+      "eligibility": "PG & PhD Students",
+      "description": "Develop a smart building model with earthquake-resistant materials and structural monitoring sensors.",
+      "requirements": [
+        "Knowledge of structural engineering",
+        "Experience with earthquake simulation software",
+        "Strong research proposal"
+      ],
+      "applicationLink": "https://earthquakebuildingproject.com",
+      "category": "Recommended",
+      "postedDate": "2024-01-16"
+    }
+  ]
+}
