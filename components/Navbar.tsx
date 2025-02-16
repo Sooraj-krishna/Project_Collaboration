@@ -94,19 +94,18 @@ const Navbar = () => {
 
         {/* Repeto Button */}
         <button>
-        <Link href="/repeto">
-          <div className="w-[117px] h-[45px] bg-[#000000] rounded-3xl text-white font-davidLibre hidden md:flex justify-center items-center text-[15.5px] hover:bg-white drop-shadow-lg hover:text-black">
-            Login
-          </div>
-        </Link>
+          <Link href="/login">
+            <div className="w-[117px] h-[45px] bg-[#000000] rounded-3xl text-white font-davidLibre hidden md:flex justify-center items-center text-[15.5px] hover:bg-white drop-shadow-lg hover:text-black">
+              Login
+            </div>
+          </Link>
         </button>
       </div>
 
       {/* Dropdown Menu for Small Screens */}
       <div
-        className={`${
-          menuOpen ? "block" : "hidden"
-        } md:hidden absolute left-0 top-20 w-full space-y-2 bg-white text-center shadow-lg z-40 py-4`}
+        className={`${menuOpen ? "block" : "hidden"
+          } md:hidden absolute left-0 top-20 w-full space-y-2 bg-white text-center shadow-lg z-40 py-4`}
       >
         <Link href="/" className="block px-4 py-2 text-black hover:bg-gray-100">
           Home
@@ -161,11 +160,11 @@ const Navbar = () => {
           )}
         </div>
         <button>
-        <Link href="/repeto">
-          <div className="w-[117px] h-[45px] bg-[#000000] rounded-3xl text-white font-davidLibre flex justify-center items-center text-[15.5px] hover:bg-white drop-shadow-lg hover:text-black">
-          Login
-          </div>
-        </Link>
+          <Link href="/repeto">
+            <div className="w-[117px] h-[45px] bg-[#000000] rounded-3xl text-white font-davidLibre flex justify-center items-center text-[15.5px] hover:bg-white drop-shadow-lg hover:text-black">
+              Login
+            </div>
+          </Link>
         </button>
       </div>
     </nav>
