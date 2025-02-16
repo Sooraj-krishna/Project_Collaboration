@@ -6,6 +6,7 @@ import OpportunityList from '../../components/repeto/OpportunityList';
 import FilterSection from '../../components/repeto/FilterSection';
 import TabSection from '../../components/repeto/TabSection';
 import Footer from '../../components/Footer';
+import LoadingScreen from '@/components/loadingScrenn';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("Latest");
@@ -16,6 +17,8 @@ export default function Home() {
   };
 
   return (
+    <>
+    <LoadingScreen/>
     <main className="min-h-screen bg-gray-50">
       <Navbar />
       <div className="flex flex-col md:flex-row">
@@ -27,5 +30,6 @@ export default function Home() {
       </div>
       <Footer />
     </main>
+    </>
   );
 }
