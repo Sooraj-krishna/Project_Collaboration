@@ -9,5 +9,4 @@ export interface Project {
   projectLink: string;
   members?: { name: string; linkedin: string }[];
   createdAt: string; // Ensure createdAt exists as a string (ISO format)
-  isFeatured: boolean; // Ensure isFeatured exists
 }
