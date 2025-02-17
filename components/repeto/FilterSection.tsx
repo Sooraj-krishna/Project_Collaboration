@@ -18,18 +18,14 @@ export default function FilterSection({ onFilterSubmit }: FilterSectionProps) {
   const filters: FilterOption[] = [
     {
       title: "Project Type",
-      options: ["Final year project ", "Mini Project", "Research project", "Personal project", "Others"]
+      options: ["Final Year Project ", "Mini Project", "Research Project", "Personal Project", "Others"]
     },
     {
       title: "Department",
       options: ["CSE", "IT", "EEE", "ECE", "MECH", "CIVIL", "Others"]
     },
     {
-      title: "Course Level",
-      options: ["UG", "PG", "PHD"]
-    },
-    {
-      title: "Year of submission",
+      title: "Year of Submission",
       options: ["2025", "2024", "2023"]
     },
     {
@@ -100,7 +96,7 @@ export default function FilterSection({ onFilterSubmit }: FilterSectionProps) {
     "Material Science & Composites",
     "Renewable Energy in Mechanical Systems",
     "Computational Fluid Dynamics (CFD)",
-    "Finite Element Analysis (FEA)"]
+    "Finite Element Analysis (FEA)","Others"]
     }
   ];
 

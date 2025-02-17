@@ -1,0 +1,174 @@
+[
+  {
+    "projectName": "AI Chatbot",
+    "projectDescription": "An AI-powered chatbot.",
+    "yearOfSubmission": "2024",
+    "department": "CSE",
+    "projectType": "Final year project",
+    "domain": "Artificial Intelligence",
+    "projectLink": "https://github.com/user/chatbot",
+    "members": [
+      {
+        "name": "Alice",
+        "linkedin": "https://linkedin.com/in/alice"
+      }
+    ],
+    "createdAt": "2024-02-10T12:00:00Z",
+    "isFeatured": true
+  },
+  {
+    "projectName": "E-Commerce Website",
+    "projectDescription": "A full-stack e-commerce platform.",
+    "yearOfSubmission": "2023",
+    "department": "IT",
+    "projectType": "Mini Project",
+    "domain": "Web Development",
+    "projectLink": "https://github.com/user/ecommerce",
+    "members": [
+      {
+        "name": "Bob",
+        "linkedin": "https://linkedin.com/in/bob"
+      }
+    ],
+    "createdAt": "2023-12-20T10:30:00Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "Turisum",
+    "projectDescription": "sdafskfhkhzcb",
+    "yearOfSubmission": "2025",
+    "projectType": "Personal project",
+    "department": "",
+    "domain": "Web Development",
+    "customDomain": "",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "djadakgb",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      }
+    ],
+    "createdAt": "2025-02-16T11:52:38.378Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "kkcxmxcknkzxxc",
+    "projectDescription": "jjijdffjkjzljcn",
+    "yearOfSubmission": "2025",
+    "projectType": "Mini Project",
+    "department": "CIVIL",
+    "domain": "Other",
+    "customDomain": "dojajddlj",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "jsdljd",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      },
+      {
+        "name": "",
+        "linkedin": ""
+      }
+    ],
+    "createdAt": "2025-02-16T22:08:15.289Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "sooraj",
+    "projectDescription": "im goood boy",
+    "yearOfSubmission": "2027",
+    "projectType": "Others",
+    "department": "CIVIL",
+    "domain": "Other",
+    "customDomain": "ai",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "doo",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      },
+      {
+        "name": "hoahsf",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      }
+    ],
+    "createdAt": "2025-02-17T00:51:05.969Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "sooraj",
+    "projectDescription": "im goood boy",
+    "yearOfSubmission": "2027",
+    "projectType": "Others",
+    "department": "CIVIL",
+    "domain": "Other",
+    "customDomain": "ai",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "doo",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      },
+      {
+        "name": "hoahsf",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      }
+    ],
+    "createdAt": "2025-02-17T00:51:09.572Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "Turisum",
+    "projectDescription": "turism dev of kerala",
+    "yearOfSubmission": "2025",
+    "projectType": "Personal project",
+    "department": "",
+    "domain": "Web Development",
+    "customDomain": "",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "",
+        "linkedin": ""
+      }
+    ],
+    "createdAt": "2025-02-17T01:59:07.942Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "my project",
+    "projectDescription": "my own project",
+    "yearOfSubmission": "2025",
+    "projectType": "Final year project",
+    "department": "",
+    "domain": "Web Development",
+    "customDomain": "",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "",
+        "linkedin": ""
+      }
+    ],
+    "createdAt": "2025-02-17T02:05:01.742Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "sooraj",
+    "projectDescription": "theeee",
+    "yearOfSubmission": "2024",
+    "projectType": "Personal project",
+    "department": "",
+    "domain": "Mobile App Development (Android & iOS)",
+    "customDomain": "",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "",
+        "linkedin": ""
+      }
+    ],
+    "createdAt": "2025-02-17T02:29:27.660Z",
+    "isFeatured": false
+  }
+]
