@@ -21,8 +21,8 @@ export default function Home() {
           <TabSection activeTab={activeTab} onTabChange={setActiveTab} />
           <ProjectGrid activeTab={activeTab} filters={filters} />
         </div>
+        <AddProjectFAB />
       </div>
-      <AddProjectFAB />
       <Footer />
     </main>
   );

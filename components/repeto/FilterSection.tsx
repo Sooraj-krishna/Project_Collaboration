@@ -201,12 +201,12 @@ export default function FilterSection({ onFilterSubmit }: FilterSectionProps) {
 
       {/* Mobile View */}
       <div className="md:hidden">
-        <button
-          onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-40 bg-blue-600 text-white rounded-full p-4 shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          <Filter className="w-6 h-6" />
-        </button>
+      <button
+  onClick={() => setIsOpen(true)}
+  className="fixed bottom-24 right-6 z-40 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full p-4 shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+>
+  <Filter className="w-6 h-6 md:mr-2 animate-pulse group-hover:animate-none" />
+</button>
 
         {/* Modal Overlay */}
         {isOpen && (

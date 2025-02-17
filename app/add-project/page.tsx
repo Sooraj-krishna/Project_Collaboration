@@ -1,27 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowLeft, Save } from "lucide-react";
+import { ArrowLeft, Save, XCircle } from "lucide-react";
 import Link from "next/link";
 
 const submissionYears = [2029, 2028, 2027, 2026, 2025, 2024, 2023];
-const projectTypes = [
-  "Final year project",
-  "Mini Project",
-  "Research project",
-  "Personal project",
-  "Others"
-];
-const departments = [
-  "CSE",
-  "IT",
-  "ECE",
-  "EEE",
-  "MECH",
-  "CIVIL",
-  "Other"
-];
-const availableDomains = Array.from(new Set([
+const projectTypes = ["Final year project", "Mini Project", "Research project", "Personal project", "Others"];
+const departments = ["CSE", "IT", "ECE", "EEE", "MECH", "CIVIL", "Other"];
+const availableDomains = [
   "Other",
   "Web Development",
   "Mobile App Development (Android & iOS)",
@@ -90,10 +76,10 @@ const availableDomains = Array.from(new Set([
   "Renewable Energy in Mechanical Systems",
   "Computational Fluid Dynamics (CFD)",
   "Finite Element Analysis (FEA)"
-]));
+];
 
 const AddProjectPage = () => {
-  const [formData, setFormData] = useState({
+  const initialFormState = {
     projectName: "",
     projectDescription: "",
     yearOfSubmission: "2025",
@@ -102,39 +88,40 @@ const AddProjectPage = () => {
     domain: "Web Development",
     customDomain: "",
     projectLink: "",
-    members: [{ name: "", linkedin: "" }]
-  });
+    members: [{ name: "", linkedin: "" }],
+  };
+
+  const [formData, setFormData] = useState(initialFormState);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Add createdAt field with the current timestamp
+
+    // Ensure at least one member has a name
+    const hasValidMember = formData.members.some(member => member.name.trim() !== "");
+    if (!hasValidMember) {
+      alert("Please enter at least one member name.");
+      return;
+    }
+
+    // Filter out empty members
+    const filteredMembers = formData.members.filter(member => member.name.trim() !== "");
+
     const projectData = {
       ...formData,
-      createdAt: new Date().toISOString(),  // Generate ISO format timestamp
-      isFeatured: false // Default value if not provided
+      members: filteredMembers,
+      createdAt: new Date().toISOString(),
     };
-  
+
     try {
       const response = await fetch("/api/saveProject", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(projectData)
+        body: JSON.stringify(projectData),
       });
-  
+
       if (response.ok) {
         alert("Project saved successfully!");
-        setFormData({
-          projectName: "",
-          projectDescription: "",
-          yearOfSubmission: "2025",
-          projectType: "",
-          department: "",
-          domain: "",
-          customDomain: "",
-          projectLink: "",
-          members: [{ name: "", linkedin: "" }]
-        });
+        setFormData(initialFormState);
       } else {
         alert("Failed to save project.");
       }
@@ -142,7 +129,6 @@ const AddProjectPage = () => {
       console.error("Error saving project:", error);
     }
   };
-  
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -157,6 +143,15 @@ const AddProjectPage = () => {
 
   const addMember = () => {
     setFormData({ ...formData, members: [...formData.members, { name: "", linkedin: "" }] });
+  };
+
+  const removeMember = (index: number) => {
+    const updatedMembers = formData.members.filter((_, i) => i !== index);
+    setFormData({ ...formData, members: updatedMembers });
+  };
+
+  const clearForm = () => {
+    setFormData(initialFormState);
   };
 
   return (
@@ -190,17 +185,50 @@ const AddProjectPage = () => {
             <input type="text" name="customDomain" className="w-full px-4 py-2 border rounded-lg" placeholder="Enter custom domain" onChange={handleChange} value={formData.customDomain} />
           )}
           <input type="url" name="projectLink" required className="w-full px-4 py-2 border rounded-lg" placeholder="Project or Drive Link" onChange={handleChange} value={formData.projectLink} />
+
+          {/* Members Section */}
           {formData.members.map((member, index) => (
-            <div key={index} className="space-y-2">
-              <input type="text" className="w-full px-4 py-2 border rounded-lg" placeholder="Member Name" value={member.name} onChange={(e) => handleMemberChange(index, "name", e.target.value)} />
-              <input type="url" className="w-full px-4 py-2 border rounded-lg" placeholder="LinkedIn Profile" value={member.linkedin} onChange={(e) => handleMemberChange(index, "linkedin", e.target.value)} />
+            <div key={index} className="flex items-center gap-2">
+              <input
+                type="text"
+                className="px-4 py-2 border rounded-lg w-1/2"
+                placeholder="Member Name"
+                value={member.name}
+                onChange={(e) => handleMemberChange(index, "name", e.target.value)}
+              />
+              <input
+                type="url"
+                className="px-4 py-2 border rounded-lg w-1/2"
+                placeholder="LinkedIn Profile"
+                value={member.linkedin}
+                onChange={(e) => handleMemberChange(index, "linkedin", e.target.value)}
+                disabled={!member.name.trim()}
+              />
+              {formData.members.length > 1 && (
+                <button type="button" className="text-red-500" onClick={() => removeMember(index)}>
+                  <XCircle className="h-6 w-6" />
+                </button>
+              )}
             </div>
           ))}
+
           <button type="button" className="w-full bg-gray-200 px-4 py-2 rounded-lg" onClick={addMember}>Add Member</button>
-          <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg flex items-center justify-center">
-            <Save className="h-5 w-5" />
-            <span>Save Project</span>
-          </button>
+
+          {/* Buttons Section */}
+          <div className="flex gap-4">
+            <button 
+              type="submit" 
+              className={`flex-1 bg-blue-600 text-white px-4 py-3 rounded-lg flex items-center justify-center ${formData.members.every(m => m.name.trim() === "") ? "opacity-50 cursor-not-allowed" : ""}`} 
+              disabled={formData.members.every(m => m.name.trim() === "")}
+            >
+              <Save className="h-5 w-5 mr-2" />
+              <span>Save Project</span>
+            </button>
+            <button type="button" className="flex-1 bg-red-500 text-white px-4 py-3 rounded-lg flex items-center justify-center" onClick={clearForm}>
+              <XCircle className="h-5 w-5 mr-2" />
+              <span>Clear</span>
+            </button>
+          </div>
         </form>
       </div>
     </div>

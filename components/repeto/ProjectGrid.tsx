@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import projectsData from "@/data/projects.json";
 import { Project } from "@/types/project";
-import { p } from "framer-motion/client";
 
 interface ProjectGridProps {
   activeTab: string;
