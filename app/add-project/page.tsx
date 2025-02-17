@@ -184,7 +184,7 @@ const AddProjectPage = () => {
           {formData.domain === "Other" && (
             <input type="text" name="customDomain" className="w-full px-4 py-2 border rounded-lg" placeholder="Enter custom domain" onChange={handleChange} value={formData.customDomain} />
           )}
-          <input type="url" name="projectLink" required className="w-full px-4 py-2 border rounded-lg" placeholder="Project or Drive Link" onChange={handleChange} value={formData.projectLink} />
+          <input type="url" name="projectLink" required className="w-full px-4 py-2 border rounded-lg" placeholder="Github link or google drive link of project contents" onChange={handleChange} value={formData.projectLink} />
 
           {/* Members Section */}
           {formData.members.map((member, index) => (
