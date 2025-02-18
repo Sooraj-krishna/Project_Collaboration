@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { ArrowLeft, Save, XCircle } from "lucide-react";
 import Link from "next/link";
 
-const submissionYears = [2029, 2028, 2027, 2026, 2025, 2024, 2023];
+const submissionYears = [2025, 2024, 2023, 2022, 2021];
 const projectTypes = ["Final year project", "Mini Project", "Research project", "Personal project", "Others"];
 const departments = ["CSE", "IT", "ECE", "EEE", "MECH", "CIVIL", "Other"];
 const availableDomains = [
@@ -92,6 +92,7 @@ const AddProjectPage = () => {
   };
 
   const [formData, setFormData] = useState(initialFormState);
+  const [showPopup, setShowPopup] = useState(false); // State for pop-up visibility
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -120,8 +121,9 @@ const AddProjectPage = () => {
       });
 
       if (response.ok) {
-        alert("Project saved successfully!");
         setFormData(initialFormState);
+        setShowPopup(true); // Show the congratulatory pop-up
+        setTimeout(() => setShowPopup(false), 3000); // Hide it after 3 seconds
       } else {
         alert("Failed to save project.");
       }
@@ -164,6 +166,25 @@ const AddProjectPage = () => {
           <h1 className="text-2xl font-bold text-gray-900">Add New Project</h1>
         </div>
       </div>
+
+      {/* Pop-up Message */}
+      {showPopup && (
+        <div style={{
+          position: 'fixed',
+          top: '20%',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          backgroundColor: '#4CAF50',
+          color: 'white',
+          padding: '20px',
+          borderRadius: '10px',
+          fontSize: '20px',
+          fontWeight: 'bold',
+          animation: 'popIn 0.6s ease-in-out'
+        }}>
+          🎉 Congratulations! Your project was saved successfully! 🎉
+        </div>
+      )}
 
       <div className="max-w-3xl mx-auto px-4 py-8">
         <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-lg p-6 space-y-6">
@@ -212,13 +233,14 @@ const AddProjectPage = () => {
             </div>
           ))}
 
-          <button type="button" className="w-full bg-gray-200 px-4 py-2 rounded-lg" onClick={addMember}>Add Member</button>
+          <button type="button" className="w-full bg-gray-200 px-4 py-2 rounded-lg" onClick={addMember}>
+            Add Member
+          </button>
 
-          {/* Buttons Section */}
           <div className="flex gap-4">
-            <button 
-              type="submit" 
-              className={`flex-1 bg-blue-600 text-white px-4 py-3 rounded-lg flex items-center justify-center ${formData.members.every(m => m.name.trim() === "") ? "opacity-50 cursor-not-allowed" : ""}`} 
+            <button
+              type="submit"
+              className={`flex-1 bg-blue-600 text-white px-4 py-3 rounded-lg flex items-center justify-center ${formData.members.every(m => m.name.trim() === "") ? "opacity-50 cursor-not-allowed" : ""}`}
               disabled={formData.members.every(m => m.name.trim() === "")}
             >
               <Save className="h-5 w-5 mr-2" />

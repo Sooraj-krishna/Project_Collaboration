@@ -24,9 +24,9 @@ const ProjectGrid = ({ activeTab, filters }: ProjectGridProps) => {
     const oneMonthAgo = new Date();
     oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
 
+    // Handle Tab filters
     switch (activeTab) {
       case "All":
-        // No filtering, show all projects
         break;
 
       case "Latest":
@@ -50,48 +50,40 @@ const ProjectGrid = ({ activeTab, filters }: ProjectGridProps) => {
         break;
     }
 
-    // Apply Other Filters
-    Object.entries(filters).forEach(([key, values]) => {
-      if (values.length > 0) {
-        if (key === "Domain") {
-          // Special case: Handle "Others" for custom domain projects
-          filteredProjects = filteredProjects.filter((p) =>
-            values.includes(p.domain) || values.includes("Others")
-            // values.includes("Others")
-            //   ? p.customDomain && !values.includes(p.domain) // Show projects with a custom domain
-            //   : values.includes(p.domain) 
-          );
-        } else if(key ==="Department"){
-          filteredProjects = filteredProjects.filter((p)=>
-          values.includes(p.department)
-         );
+    // If there are filters, apply them
+    if (Object.keys(filters).length > 0) {
+      Object.entries(filters).forEach(([key, values]) => {
+        if (values.length > 0) {
+          if (key === "Domain") {
+            filteredProjects = filteredProjects.filter((p) =>
+              values.includes(p.domain) || values.includes("Others")
+            );
+          } else if (key === "Department") {
+            filteredProjects = filteredProjects.filter((p) =>
+              values.includes(p.department)
+            );
+          } else if (key === "Year of Submission") {
+            filteredProjects = filteredProjects.filter((p) =>
+              values.includes(p.yearOfSubmission)
+            );
+          } else if (key === "Project Type") {
+            filteredProjects = filteredProjects.filter((p) =>
+              values.includes(p.projectType)
+            );
+          } else {
+            filteredProjects = filteredProjects.filter((p) => {
+              const projectValue = p[key as keyof Project];
+              if (typeof projectValue === "string") {
+                return values.includes(projectValue);
+              }
+              return false;
+            });
+          }
         }
+      });
+    }
 
-        else if(key ==="Year of Submission"){
-          filteredProjects = filteredProjects.filter((p)=>
-          values.includes(p.yearOfSubmission)
-         );
-        }
-        else if(key ==="Project Type"){
-          filteredProjects = filteredProjects.filter((p)=>
-            values.includes(p.projectType));
-        }
-        else {
-          // General filtering for other categories
-          filteredProjects = filteredProjects.filter((p) => {
-            const projectValue = p[key as keyof Project];
-
-            // Ensure that projectValue is a string before filtering
-            if (typeof projectValue === "string") {
-              return values.includes(projectValue);
-            }
-
-            return false;
-          });
-        }
-      }
-    });
-
+    // Update the state with the filtered or unfiltered projects
     setProjects(filteredProjects);
   }, [activeTab, filters]);
 
