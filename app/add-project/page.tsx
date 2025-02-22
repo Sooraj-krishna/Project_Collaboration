@@ -89,7 +89,7 @@ const AddProjectPage = () => {
     projectName: "",
     projectDescription: "",
     yearOfSubmission: "2025",
-    projectType: "Personal project",
+    projectType: "Personal Project",
     department: "",
     domain: "Web Development",
     customDomain: "",
