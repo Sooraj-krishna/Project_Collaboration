@@ -5,7 +5,7 @@ import { ArrowLeft, Save, XCircle } from "lucide-react";
 import Link from "next/link";
 
 const submissionYears = [2025, 2024, 2023, 2022, 2021];
-const projectTypes = ["Final year project", "Mini Project", "Research project", "Personal project", "Others"];
+const projectTypes = ["Final Year Project", "Mini Project", "Research Project", "Personal Project", "Others"];
 const departments = ["CSE", "IT", "ECE", "EEE", "MECH", "CIVIL", "Other"];
 const availableDomains = [
   "Other",

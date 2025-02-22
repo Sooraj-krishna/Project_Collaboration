@@ -16,15 +16,17 @@ const ProjectGrid = ({ activeTab, filters }: ProjectGridProps) => {
   useEffect(() => {
     let filteredProjects: Project[] = projectsData.map((p) => ({
       ...p,
-      createdAt: p.createdAt ?? new Date().toISOString(), // Ensure createdAt exists
-      department: Array.isArray(p.department) ? p.department.join(", ") : p.department // Convert array to string
+      createdAt: p.createdAt ?? new Date().toISOString(), 
+      department: Array.isArray(p.department) ? p.department.join(", ") : p.department,
+      projectLink: p.projectLink ?? "",  // Ensure it's always a string
+      customDomain: p.customDomain ?? "",
+      members: p.members ?? []
     }));
 
     // Apply Tab Filters
     const oneMonthAgo = new Date();
     oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
 
-    // Handle Tab filters
     switch (activeTab) {
       case "All":
         break;
@@ -50,7 +52,7 @@ const ProjectGrid = ({ activeTab, filters }: ProjectGridProps) => {
         break;
     }
 
-    // If there are filters, apply them
+    // Apply Filters
     if (Object.keys(filters).length > 0) {
       Object.entries(filters).forEach(([key, values]) => {
         if (values.length > 0) {
@@ -83,7 +85,6 @@ const ProjectGrid = ({ activeTab, filters }: ProjectGridProps) => {
       });
     }
 
-    // Update the state with the filtered or unfiltered projects
     setProjects(filteredProjects);
   }, [activeTab, filters]);
 
