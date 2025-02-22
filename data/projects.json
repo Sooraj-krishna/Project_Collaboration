@@ -5,7 +5,7 @@
     "yearOfSubmission": "2029",
     "department": "CSE",
     "projectType": "Final year project",
-    "domain": "Artificial Intelligence (AI) & Machine Learning (ML)",
+    "domain": "Artificial Intelligence",
     "projectLink": "https://github.com/user/chatbot",
     "members": [
       {
@@ -85,7 +85,7 @@
     "yearOfSubmission": "2023",
     "department": "IT",
     "projectType": "Mini Project",
-    "domain": "Web Development",
+    "domain": "E-commerce & CMS Development",
     "projectLink": "https://github.com/user/ecommerce",
     "members": [
       {
@@ -96,76 +96,8 @@
     "createdAt": "2023-12-20T10:30:00Z"
   },
   {
-    "projectName": "Robotic Arm Control",
-    "projectDescription": "A robotic arm control system using gesture recognition.",
-    "yearOfSubmission": "2026",
-    "department": "MECH",
-    "projectType": "Personal project",
-    "domain": "Robotics & Mechatronics",
-    "projectLink": "https://github.com/user/robotic-arm",
-    "members": [
-      {
-        "name": "Tom",
-        "linkedin": "https://linkedin.com/in/tom"
-      }
-    ],
-    "createdAt": "2023-09-12T10:50:00Z"
-  },
-  {
-    "projectName": "Autonomous Drone Navigation",
-    "projectDescription": "A drone navigation system based on computer vision.",
-    "yearOfSubmission": "2025",
-    "department": "ECE",
-    "projectType": "Final year project",
-    "domain": "Robotics & Mechatronics",
-    "projectLink": "https://github.com/user/autonomous-drone",
-    "members": [
-      {
-        "name": "Ella",
-        "linkedin": "https://linkedin.com/in/ella"
-      }
-    ],
-    "createdAt": "2024-02-01T11:30:00Z"
-  },
-  {
-    "projectName": "Self-Powered IoT Sensor Network",
-    "projectDescription": "A sensor network powered by renewable energy.",
-    "yearOfSubmission": "2027",
-    "department": "CSE",
-    "projectType": "Others",
-    "domain": "Internet of Things (IoT)",
-    "projectLink": "https://github.com/user/iot-sensor-network",
-    "members": [
-      {
-        "name": "Liam",
-        "linkedin": "https://linkedin.com/in/liam"
-      },
-      {
-        "name": "Noah",
-        "linkedin": "https://linkedin.com/in/noah"
-      }
-    ],
-    "createdAt": "2023-07-28T16:00:00Z"
-  },
-  {
-    "projectName": "AI-Powered Chatbot for Healthcare",
-    "projectDescription": "A chatbot system designed for healthcare services.",
-    "yearOfSubmission": "2028",
-    "department": "IT",
-    "projectType": "Final year project",
-    "domain": "Artificial Intelligence (AI) & Machine Learning (ML)",
-    "projectLink": "https://github.com/user/ai-healthcare-chatbot",
-    "members": [
-      {
-        "name": "Sophia",
-        "linkedin": "https://linkedin.com/in/sophia"
-      }
-    ],
-    "createdAt": "2023-11-05T14:20:00Z"
-  },
-  {
-    "projectName": "Smart Tourism Guide",
-    "projectDescription": "Description: The Smart Tourism Guide is a web application designed to help users discover and explore popular tourist destinations. The platform allows users to browse a curated list of attractions, upload images and descriptions of their favorite places, and share their experiences with the community. The application features an intuitive interface, card-based listings of tourist spots, and detailed pages with information like location, best visiting time, and reviews.\n\nUsing React for the front-end, Next.js for server-side rendering, and MongoDB for storing user data, the Smart Tourism Guide ensures seamless performance and smooth user interaction. The image upload functionality is powered by Base64 encoding to store images directly in the database. To enhance user engagement, users can also search for destinations by name or category, such as historical sites, nature reserves, or cultural landmarks.\n\nTechnologies Used:\n\nFrontend: React, Next.js\nBackend: Node.js, Express\nDatabase: MongoDB\nImage Handling: Base64 Encoding\nVersion Control: Git, GitHub\nFeatures:\n\nBrowse and search tourist destinations\nUser-generated content: image and description upload\nDetailed tourist spot pages with reviews and ratings\nSeamless user authentication and profile management\nMobile responsive design for ease of access on any device\nChallenges Faced:\n\nImplementing image uploads using Base64 encoding and handling large images efficiently\nEnsuring fast and smooth rendering of large data sets using Next.js for server-side rendering\nDesigning an intuitive user interface for smooth navigation and interaction\nOutcome: The project successfully allows users to interact with and contribute to the platform, enhancing the overall travel experience by leveraging technology to foster community engagement.",
+    "projectName": "Turisum",
+    "projectDescription": "sdafskfhkhzcb",
     "yearOfSubmission": "2025",
     "projectType": "Personal project",
     "department": "",
@@ -174,10 +106,202 @@
     "projectLink": "https://github.com/Sooraj-krishna",
     "members": [
       {
-        "name": "Sooraj Krishna KP",
-        "linkedin": "https://www.linkedin.com/in/sooraj-krishna-k-p-9030642b1/"
+        "name": "djadakgb",
+        "linkedin": "https://github.com/Sooraj-krishna"
       }
     ],
-    "createdAt": "2025-02-17T12:42:45.724Z"
+    "createdAt": "2025-02-16T11:52:38.378Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "kkcxmxcknkzxxc",
+    "projectDescription": "jjijdffjkjzljcn",
+    "yearOfSubmission": "2025",
+    "projectType": "Mini Project",
+    "department": "CIVIL",
+    "domain": "Other",
+    "customDomain": "dojajddlj",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "jsdljd",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      },
+      {
+        "name": "",
+        "linkedin": ""
+      }
+    ],
+    "createdAt": "2025-02-16T22:08:15.289Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "sooraj",
+    "projectDescription": "im goood boy",
+    "yearOfSubmission": "2027",
+    "department": "CSE",
+    "projectType": "Others",
+    "department": "CIVIL",
+    "domain": "Other",
+    "customDomain": "ai",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "doo",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      },
+      {
+        "name": "hoahsf",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      }
+    ],
+    "createdAt": "2023-07-28T16:00:00Z"
+  },
+  {
+    "projectName": "sooraj",
+    "projectDescription": "im goood boy",
+    "yearOfSubmission": "2027",
+    "projectType": "Others",
+    "department": "CIVIL",
+    "domain": "Other",
+    "customDomain": "ai",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "doo",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      },
+      {
+        "name": "hoahsf",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      }
+    ],
+    "createdAt": "2025-02-17T00:51:09.572Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "Turisum",
+    "projectDescription": "turism dev of kerala",
+    "yearOfSubmission": "2025",
+    "projectType": "Personal project",
+    "department": "",
+    "domain": "Web Development",
+    "customDomain": "",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "",
+        "linkedin": ""
+      }
+    ],
+    "createdAt": "2025-02-17T01:59:07.942Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "my project",
+    "projectDescription": "my own project",
+    "yearOfSubmission": "2025",
+    "projectType": "Final year project",
+    "department": "",
+    "domain": "Web Development",
+    "customDomain": "",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "",
+        "linkedin": ""
+      }
+    ],
+    "createdAt": "2025-02-17T02:05:01.742Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "sooraj",
+    "projectDescription": "theeee",
+    "yearOfSubmission": "2024",
+    "projectType": "Personal project",
+    "department": "",
+    "domain": "Mobile App Development (Android & iOS)",
+    "customDomain": "",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "",
+        "linkedin": ""
+      }
+    ],
+    "createdAt": "2025-02-17T02:29:27.660Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "Turisum",
+    "projectDescription": "zjcadgbkagd",
+    "yearOfSubmission": "2025",
+    "projectType": "Personal project",
+    "department": "",
+    "domain": "Web Development",
+    "customDomain": "",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "hkdgado",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      }
+    ],
+    "createdAt": "2025-02-17T09:47:40.727Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "Turisum",
+    "projectDescription": "zjcadgbkagd",
+    "yearOfSubmission": "2025",
+    "projectType": "Personal project",
+    "department": "",
+    "domain": "Web Development",
+    "customDomain": "",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "hkdgado",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      }
+    ],
+    "createdAt": "2025-02-17T09:47:43.723Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "hi",
+    "projectDescription": " ahdjdandlbl",
+    "yearOfSubmission": "2025",
+    "projectType": "Personal project",
+    "department": "",
+    "domain": "Web Development",
+    "customDomain": "",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [],
+    "createdAt": "2025-02-17T10:35:37.906Z",
+    "isFeatured": false
+  },
+  {
+    "projectName": "Turisum",
+    "projectDescription": "sooraj",
+    "yearOfSubmission": "2025",
+    "projectType": "Personal project",
+    "department": "",
+    "domain": "Web Development",
+    "customDomain": "",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "sooraj",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      },
+      {
+        "name": "krishna",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      }
+    ],
+    "createdAt": "2025-02-17T10:46:05.610Z",
+    "isFeatured": false
   }
 ]
