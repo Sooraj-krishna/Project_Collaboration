@@ -10,8 +10,14 @@
     "projectLink": "https://github.com/example/chatbot",
     "createdAt": "2025-01-15",
     "members": [
-      { "name": "Alice Johnson", "linkedin": "https://linkedin.com/in/alicejohnson" },
-      { "name": "Bob Smith", "linkedin": "https://linkedin.com/in/bobsmith" }
+      {
+        "name": "Alice Johnson",
+        "linkedin": "https://linkedin.com/in/alicejohnson"
+      },
+      {
+        "name": "Bob Smith",
+        "linkedin": "https://linkedin.com/in/bobsmith"
+      }
     ]
   },
   {
@@ -25,7 +31,10 @@
     "projectLink": "https://github.com/example/secure-voting",
     "createdAt": "2024-06-10",
     "members": [
-      { "name": "Charlie Brown", "linkedin": "https://linkedin.com/in/charliebrown" }
+      {
+        "name": "Charlie Brown",
+        "linkedin": "https://linkedin.com/in/charliebrown"
+      }
     ]
   },
   {
@@ -39,8 +48,14 @@
     "projectLink": "https://github.com/example/smart-home",
     "createdAt": "2023-09-22",
     "members": [
-      { "name": "David Lee", "linkedin": "https://linkedin.com/in/davidlee" },
-      { "name": "Eve Carter", "linkedin": "https://linkedin.com/in/evecarter" }
+      {
+        "name": "David Lee",
+        "linkedin": "https://linkedin.com/in/davidlee"
+      },
+      {
+        "name": "Eve Carter",
+        "linkedin": "https://linkedin.com/in/evecarter"
+      }
     ]
   },
   {
@@ -54,7 +69,10 @@
     "projectLink": "https://github.com/example/stock-prediction",
     "createdAt": "2022-05-18",
     "members": [
-      { "name": "Franklin White", "linkedin": "https://linkedin.com/in/franklinwhite" }
+      {
+        "name": "Franklin White",
+        "linkedin": "https://linkedin.com/in/franklinwhite"
+      }
     ]
   },
   {
@@ -68,8 +86,14 @@
     "projectLink": "https://github.com/example/ecommerce",
     "createdAt": "2021-12-03",
     "members": [
-      { "name": "Grace Kelly", "linkedin": "https://linkedin.com/in/gracekelly" },
-      { "name": "Henry Adams", "linkedin": "https://linkedin.com/in/henryadams" }
+      {
+        "name": "Grace Kelly",
+        "linkedin": "https://linkedin.com/in/gracekelly"
+      },
+      {
+        "name": "Henry Adams",
+        "linkedin": "https://linkedin.com/in/henryadams"
+      }
     ]
   },
   {
@@ -83,7 +107,10 @@
     "projectLink": "https://github.com/example/cybersecurity-threat-detection",
     "createdAt": "2025-02-01",
     "members": [
-      { "name": "Ian Thomas", "linkedin": "https://linkedin.com/in/ianthomas" }
+      {
+        "name": "Ian Thomas",
+        "linkedin": "https://linkedin.com/in/ianthomas"
+      }
     ]
   },
   {
@@ -97,7 +124,10 @@
     "projectLink": "https://github.com/example/3d-prosthetics",
     "createdAt": "2024-04-12",
     "members": [
-      { "name": "Jack Wilson", "linkedin": "https://linkedin.com/in/jackwilson" }
+      {
+        "name": "Jack Wilson",
+        "linkedin": "https://linkedin.com/in/jackwilson"
+      }
     ]
   },
   {
@@ -111,7 +141,10 @@
     "projectLink": "https://github.com/example/resume-scanner",
     "createdAt": "2023-07-08",
     "members": [
-      { "name": "Katie Brown", "linkedin": "https://linkedin.com/in/katiebrown" }
+      {
+        "name": "Katie Brown",
+        "linkedin": "https://linkedin.com/in/katiebrown"
+      }
     ]
   },
   {
@@ -125,7 +158,10 @@
     "projectLink": "https://github.com/example/smart-traffic",
     "createdAt": "2022-08-30",
     "members": [
-      { "name": "Leo Carter", "linkedin": "https://linkedin.com/in/leocarter" }
+      {
+        "name": "Leo Carter",
+        "linkedin": "https://linkedin.com/in/leocarter"
+      }
     ]
   },
   {
@@ -139,7 +175,10 @@
     "projectLink": "https://github.com/example/health-monitoring",
     "createdAt": "2021-11-15",
     "members": [
-      { "name": "Mia Edwards", "linkedin": "https://linkedin.com/in/miaedwards" }
+      {
+        "name": "Mia Edwards",
+        "linkedin": "https://linkedin.com/in/miaedwards"
+      }
     ]
   },
   {
@@ -153,7 +192,10 @@
     "projectLink": "https://github.com/example/fake-news-detector",
     "createdAt": "2025-01-27",
     "members": [
-      { "name": "Nathan Green", "linkedin": "https://linkedin.com/in/nathangreen" }
+      {
+        "name": "Nathan Green",
+        "linkedin": "https://linkedin.com/in/nathangreen"
+      }
     ]
   },
   {
@@ -167,7 +209,27 @@
     "projectLink": "https://github.com/example/smart-irrigation",
     "createdAt": "2024-03-29",
     "members": [
-      { "name": "Olivia Davis", "linkedin": "https://linkedin.com/in/oliviadavis" }
+      {
+        "name": "Olivia Davis",
+        "linkedin": "https://linkedin.com/in/oliviadavis"
+      }
     ]
+  },
+  {
+    "projectName": "Web APP",
+    "projectDescription": "Web application for image to text generator",
+    "yearOfSubmission": "2024",
+    "projectType": "Others",
+    "department": "",
+    "domain": "Web Development",
+    "customDomain": "",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "Sooraj Krishna",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      }
+    ],
+    "createdAt": "2025-02-22T12:46:43.445Z"
   }
 ]

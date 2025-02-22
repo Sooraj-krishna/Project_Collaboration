@@ -83,7 +83,7 @@ const AddProjectPage = () => {
     projectName: "",
     projectDescription: "",
     yearOfSubmission: "2025",
-    projectType: "Personal project",
+    projectType: "Personal Project",
     department: "",
     domain: "Web Development",
     customDomain: "",
@@ -92,26 +92,23 @@ const AddProjectPage = () => {
   };
 
   const [formData, setFormData] = useState(initialFormState);
-  const [showPopup, setShowPopup] = useState(false); // State for pop-up visibility
+  const [loading, setLoading] = useState(false); // Prevents duplicate submissions
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (loading) return; // Prevent multiple submissions
+    setLoading(true);
 
-    // Ensure at least one member has a name
     const hasValidMember = formData.members.some(member => member.name.trim() !== "");
     if (!hasValidMember) {
       alert("Please enter at least one member name.");
+      setLoading(false);
       return;
     }
 
-    // Filter out empty members
     const filteredMembers = formData.members.filter(member => member.name.trim() !== "");
-
-    const projectData = {
-      ...formData,
-      members: filteredMembers,
-      createdAt: new Date().toISOString(),
-    };
+    const projectData = { ...formData, members: filteredMembers, createdAt: new Date().toISOString() };
 
     try {
       const response = await fetch("/api/saveProject", {
@@ -122,13 +119,15 @@ const AddProjectPage = () => {
 
       if (response.ok) {
         setFormData(initialFormState);
-        setShowPopup(true); // Show the congratulatory pop-up
-        setTimeout(() => setShowPopup(false), 3000); // Hide it after 3 seconds
+        setShowPopup(true);
+        setTimeout(() => setShowPopup(false), 3000);
       } else {
         alert("Failed to save project.");
       }
     } catch (error) {
       console.error("Error saving project:", error);
+    } finally {
+      setLoading(false); // Re-enable button
     }
   };
 
@@ -167,22 +166,9 @@ const AddProjectPage = () => {
         </div>
       </div>
 
-      {/* Pop-up Message */}
       {showPopup && (
-        <div style={{
-          position: 'fixed',
-          top: '20%',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          backgroundColor: '#4CAF50',
-          color: 'white',
-          padding: '20px',
-          borderRadius: '10px',
-          fontSize: '20px',
-          fontWeight: 'bold',
-          animation: 'popIn 0.6s ease-in-out'
-        }}>
-          🎉 Congratulations! Your project was saved successfully! 🎉
+        <div className="fixed top-20 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg text-lg font-bold">
+          🎉 Project saved successfully! 🎉
         </div>
       )}
 
@@ -199,32 +185,12 @@ const AddProjectPage = () => {
           <select name="department" required className="w-full px-4 py-2 border rounded-lg" onChange={handleChange} value={formData.department}>
             {departments.map((dept) => (<option key={dept} value={dept}>{dept}</option>))}
           </select>
-          <select name="domain" required className="w-full px-4 py-2 border rounded-lg" onChange={handleChange} value={formData.domain}>
-            {availableDomains.map((domain) => (<option key={domain} value={domain}>{domain}</option>))}
-          </select>
-          {formData.domain === "Other" && (
-            <input type="text" name="customDomain" className="w-full px-4 py-2 border rounded-lg" placeholder="Enter custom domain" onChange={handleChange} value={formData.customDomain} />
-          )}
-          <input type="url" name="projectLink" required className="w-full px-4 py-2 border rounded-lg" placeholder="Github link or google drive link of project contents" onChange={handleChange} value={formData.projectLink} />
+          <input type="url" name="projectLink" required className="w-full px-4 py-2 border rounded-lg" placeholder="Project Link" onChange={handleChange} value={formData.projectLink} />
 
-          {/* Members Section */}
           {formData.members.map((member, index) => (
             <div key={index} className="flex items-center gap-2">
-              <input
-                type="text"
-                className="px-4 py-2 border rounded-lg w-1/2"
-                placeholder="Member Name"
-                value={member.name}
-                onChange={(e) => handleMemberChange(index, "name", e.target.value)}
-              />
-              <input
-                type="url"
-                className="px-4 py-2 border rounded-lg w-1/2"
-                placeholder="LinkedIn Profile"
-                value={member.linkedin}
-                onChange={(e) => handleMemberChange(index, "linkedin", e.target.value)}
-                disabled={!member.name.trim()}
-              />
+              <input type="text" className="px-4 py-2 border rounded-lg w-1/2" placeholder="Member Name" value={member.name} onChange={(e) => handleMemberChange(index, "name", e.target.value)} />
+              <input type="url" className="px-4 py-2 border rounded-lg w-1/2" placeholder="LinkedIn Profile" value={member.linkedin} onChange={(e) => handleMemberChange(index, "linkedin", e.target.value)} disabled={!member.name.trim()} />
               {formData.members.length > 1 && (
                 <button type="button" className="text-red-500" onClick={() => removeMember(index)}>
                   <XCircle className="h-6 w-6" />
@@ -238,13 +204,9 @@ const AddProjectPage = () => {
           </button>
 
           <div className="flex gap-4">
-            <button
-              type="submit"
-              className={`flex-1 bg-blue-600 text-white px-4 py-3 rounded-lg flex items-center justify-center ${formData.members.every(m => m.name.trim() === "") ? "opacity-50 cursor-not-allowed" : ""}`}
-              disabled={formData.members.every(m => m.name.trim() === "")}
-            >
-              <Save className="h-5 w-5 mr-2" />
-              <span>Save Project</span>
+            <button type="submit" className={`flex-1 bg-blue-600 text-white px-4 py-3 rounded-lg flex items-center justify-center ${loading ? "opacity-50 cursor-not-allowed" : ""}`} disabled={loading}>
+              {loading ? <Save className="h-5 w-5 mr-2 animate-spin" /> : <Save className="h-5 w-5 mr-2" />}
+              {loading ? "Saving..." : "Save Project"}
             </button>
             <button type="button" className="flex-1 bg-red-500 text-white px-4 py-3 rounded-lg flex items-center justify-center" onClick={clearForm}>
               <XCircle className="h-5 w-5 mr-2" />
