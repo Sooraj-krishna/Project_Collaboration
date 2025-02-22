@@ -8,7 +8,7 @@ interface FilterOption {
 
 interface FilterSectionProps {
   onFilterSubmit?: (selectedFilters: Record<string, string[]>) => void;
-  onClearFilters?: () => void; // Added function to handle filter clearing from parent
+  onClearFilters?: () => void;
 }
 
 export default function FilterSection({ onFilterSubmit, onClearFilters }: FilterSectionProps) {
@@ -137,21 +137,14 @@ export default function FilterSection({ onFilterSubmit, onClearFilters }: Filter
         formattedFilters[title] = Array.from(optionsSet);
       }
     });
-
-    // Only submit if there are valid filters selected
-    if (Object.keys(formattedFilters).length > 0) {
-      onFilterSubmit?.(formattedFilters);
-    } else {
-      // Reset to show all data if no filters are selected
-      onFilterSubmit?.({});
-    }
+    onFilterSubmit?.(Object.keys(formattedFilters).length > 0 ? formattedFilters : {});
     setIsOpen(false);
   };
 
   const clearFilters = () => {
     setSelectedOptions({});
     setIsOpen(false);
-    onClearFilters?.(); // Notify parent to clear filters as well
+    onClearFilters?.();
   };
 
   const selectedCount = Object.values(selectedOptions).reduce(
@@ -177,22 +170,30 @@ export default function FilterSection({ onFilterSubmit, onClearFilters }: Filter
 
           {openDropdowns[filter.title] && (
             <div className="px-4 pb-3 border-t">
-              <div className="pt-2 space-y-2">
-                {filter.options.map((option) => (
-                  <label
-                    key={option}
-                    className="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={isSelected(filter.title, option)}
-                      onChange={() => toggleOption(filter.title, option)}
-                      className="w-4 h-4 border-2 border-gray-300 rounded cursor-pointer focus:ring-2 focus:ring-blue-500 focus:outline-none checked:bg-blue-500 checked:border-blue-500"
-                    />
-                    <span className="text-sm text-gray-700">{option}</span>
-                  </label>
-                ))}
-              </div>
+              {filter.title === "Domain" ? (
+                <DomainFilterOptions
+                  filter={filter}
+                  isSelected={isSelected}
+                  toggleOption={toggleOption}
+                />
+              ) : (
+                <div className="pt-2 space-y-2">
+                  {filter.options.map((option) => (
+                    <label
+                      key={option}
+                      className="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={isSelected(filter.title, option)}
+                        onChange={() => toggleOption(filter.title, option)}
+                        className="w-4 h-4 border-2 border-gray-300 rounded cursor-pointer focus:ring-2 focus:ring-blue-500 focus:outline-none checked:bg-blue-500 checked:border-blue-500"
+                      />
+                      <span className="text-sm text-gray-700">{option}</span>
+                    </label>
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -216,6 +217,52 @@ export default function FilterSection({ onFilterSubmit, onClearFilters }: Filter
     </div>
   );
 
+  // Domain filter options component with search functionality
+  const DomainFilterOptions = ({
+    filter,
+    isSelected,
+    toggleOption
+  }: {
+    filter: FilterOption;
+    isSelected: (filterTitle: string, option: string) => boolean;
+    toggleOption: (filterTitle: string, option: string) => void;
+  }) => {
+    const [searchTerm, setSearchTerm] = useState("");
+    const filteredOptions = filter.options.filter(option =>
+      option.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    return (
+      <div className="pt-2 space-y-2">
+        <input
+          type="text"
+          placeholder="Search Domain..."
+          className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        {filteredOptions.length > 0 ? (
+          filteredOptions.map((option) => (
+            <label
+              key={option}
+              className="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded"
+            >
+              <input
+                type="checkbox"
+                checked={isSelected(filter.title, option)}
+                onChange={() => toggleOption(filter.title, option)}
+                className="w-4 h-4 border-2 border-gray-300 rounded cursor-pointer focus:ring-2 focus:ring-blue-500 focus:outline-none checked:bg-blue-500 checked:border-blue-500"
+              />
+              <span className="text-sm text-gray-700">{option}</span>
+            </label>
+          ))
+        ) : (
+          <div className="text-sm text-gray-500">No options found.</div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <>
       {/* Desktop View */}
@@ -232,16 +279,12 @@ export default function FilterSection({ onFilterSubmit, onClearFilters }: Filter
           <Filter className="w-6 h-6 md:mr-2 animate-pulse group-hover:animate-none" />
         </button>
 
-        {/* Modal Overlay */}
         {isOpen && (
           <div className="fixed inset-0 z-50">
-            {/* Background Overlay */}
             <div
               className="absolute inset-0 bg-black bg-opacity-50"
               onClick={() => setIsOpen(false)}
             />
-
-            {/* Modal Content */}
             <div className="absolute inset-0 bg-white flex flex-col">
               <div className="flex justify-between items-center p-4 border-b">
                 <h2 className="text-lg font-semibold text-black">Filters</h2>
