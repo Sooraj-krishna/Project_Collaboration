@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Navbar from '../../components/Navbar';
-import OpportunityList from '../../components/repeto/OpportunityList';
+// import OpportunityList from '../../components/repeto/OpportunityList';
 import FilterSection from '../../components/repeto/FilterSection';
 import TabSection from '../../components/repeto/TabSection';
 import Footer from '../../components/Footer';
@@ -25,7 +25,7 @@ export default function Home() {
         <FilterSection onFilterSubmit={handleFilterSubmit} />
         <div className="flex-1 max-w-7xl px-4 py-6 space-y-8">
           <TabSection activeTab={activeTab} onTabChange={setActiveTab} />
-          <OpportunityList filters={activeFilters} activeTab={activeTab} />
+          {/* <OpportunityList filters={activeFilters} activeTab={activeTab} /> */}
         </div>
       </div>
       <Footer />

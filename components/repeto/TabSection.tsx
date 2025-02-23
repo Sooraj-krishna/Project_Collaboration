@@ -1,10 +1,10 @@
 interface TabSectionProps {
   activeTab: string;
-  onTabChange: (tab: string) => void;
+  onTabChange: (tab: string) => void; // Ensure correct function type
 }
 
 export default function TabSection({ activeTab, onTabChange }: TabSectionProps) {
-  const tabs = ["Latest", "Oldest", "This Week", "Featured"];
+  const tabs = ["All", "Latest", "Oldest", "This Week",];
   
   return (
     <div className="bg-white rounded-lg shadow">
