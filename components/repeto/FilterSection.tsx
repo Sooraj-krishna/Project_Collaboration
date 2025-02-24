@@ -8,9 +8,10 @@ interface FilterOption {
 
 interface FilterSectionProps {
   onFilterSubmit?: (selectedFilters: Record<string, string[]>) => void;
+  onClearFilters?: () => void;
 }
 
-export default function FilterSection({ onFilterSubmit }: FilterSectionProps) {
+export default function FilterSection({ onFilterSubmit, onClearFilters }: FilterSectionProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState<Record<string, Set<string>>>({});
   const [openDropdowns, setOpenDropdowns] = useState<Record<string, boolean>>({});
@@ -18,89 +19,88 @@ export default function FilterSection({ onFilterSubmit }: FilterSectionProps) {
   const filters: FilterOption[] = [
     {
       title: "Project Type",
-      options: ["Final year project ", "Mini Project", "Research project", "Personal project", "Others"]
+      options: ["Final Year Project", "Mini Project", "Research Project", "Personal Project", "Others"]
     },
     {
       title: "Department",
       options: ["CSE", "IT", "EEE", "ECE", "MECH", "CIVIL", "Others"]
     },
     {
-      title: "Course Level",
-      options: ["UG", "PG", "PHD"]
-    },
-    {
-      title: "Year of submission",
-      options: ["2025", "2024", "2023"]
+      title: "Year of Submission",
+      options: ["2025", "2024", "2023", "2022", "2021"]
     },
     {
       title: "Domain",
-      options: ["Web Development",
-    "Mobile App Development (Android & iOS)",
-    "Artificial Intelligence (AI) & Machine Learning (ML)",
-    "Data Science & Big Data Analytics",
-    "Cybersecurity & Ethical Hacking",
-    "Blockchain & Cryptocurrency",
-    "Cloud Computing & DevOps",
-    "Game Development & AR/VR",
-    "Internet of Things (IoT)",
-    "Natural Language Processing (NLP)",
-    "Database Management & Data Warehousing",
-    "Quantum Computing",
-    "Software Testing & Automation",
-    "Full Stack Development (MERN, MEAN, etc.)",
-    "UI/UX & Human-Computer Interaction",
-    "Computer Networks & Network Security",
-    "Augmented Reality (AR) & Virtual Reality (VR)",
-    "E-commerce & CMS Development",
-    "No-Code & Low-Code Development",
-    "Cloud Security & Serverless Computing",
-    "DevOps & Site Reliability Engineering (SRE)",
-    "Edge Computing & Distributed Systems",
-    "IT Infrastructure & System Administration",
-    "Data Engineering & Business Intelligence",
-    "IT Governance & Compliance",
-    "Structural Engineering & Earthquake-Resistant Design",
-    "Transportation & Highway Engineering",
-    "Geotechnical Engineering & Soil Mechanics",
-    "Smart Cities & Urban Planning",
-    "Sustainable & Green Building Technology",
-    "Hydraulics & Water Resource Engineering",
-    "Construction Management & Project Planning",
-    "Environmental Engineering & Waste Management",
-    "Building Information Modeling (BIM)",
-    "Disaster Management & Risk Analysis",
-    "Bridge & Tunnel Engineering",
-    "Surveying & Remote Sensing (GIS & GPS)",
-    "VLSI & Chip Design",
-    "Embedded Systems & Microcontrollers",
-    "Wireless Communication (5G, LTE, Satellite)",
-    "Signal & Image Processing",
-    "Optical Fiber & Photonics",
-    "Digital & Analog Circuit Design",
-    "Antenna & RF Engineering",
-    "Smart Sensors & Wearable Technology",
-    "Audio & Speech Processing",
-    "Biomedical Electronics & Bionics",
-    "MEMS & Nanoelectronics",
-    "Power Systems & Smart Grids",
-    "Renewable Energy (Solar, Wind, Hydro)",
-    "Control Systems & Automation",
-    "Robotics & Mechatronics",
-    "Electric Vehicles (EV) & Battery Technologies",
-    "High Voltage Engineering",
-    "Energy Management & Conservation",
-    "Industrial Instrumentation & Process Control",
-    "Electrical Machines & Drives",
-    "Smart Home & Building Automation",
-    "CAD, CAM & 3D Printing",
-    "Automotive & Aerospace Engineering",
-    "Thermodynamics & Fluid Mechanics",
-    "Mechatronics & Smart Manufacturing",
-    "HVAC & Refrigeration Systems",
-    "Material Science & Composites",
-    "Renewable Energy in Mechanical Systems",
-    "Computational Fluid Dynamics (CFD)",
-    "Finite Element Analysis (FEA)"]
+      options: [
+        "Other",
+        "Web Development",
+        "Mobile App Development (Android & iOS)",
+        "Artificial Intelligence (AI) & Machine Learning (ML)",
+        "Data Science & Big Data Analytics",
+        "Cybersecurity & Ethical Hacking",
+        "Blockchain & Cryptocurrency",
+        "Cloud Computing & DevOps",
+        "Game Development & AR/VR",
+        "Internet of Things (IoT)",
+        "Natural Language Processing (NLP)",
+        "Database Management & Data Warehousing",
+        "Quantum Computing",
+        "Software Testing & Automation",
+        "Full Stack Development (MERN, MEAN, etc.)",
+        "UI/UX & Human-Computer Interaction",
+        "Computer Networks & Network Security",
+        "Augmented Reality (AR) & Virtual Reality (VR)",
+        "E-commerce & CMS Development",
+        "No-Code & Low-Code Development",
+        "Cloud Security & Serverless Computing",
+        "DevOps & Site Reliability Engineering (SRE)",
+        "Edge Computing & Distributed Systems",
+        "IT Infrastructure & System Administration",
+        "Data Engineering & Business Intelligence",
+        "IT Governance & Compliance",
+        "Structural Engineering & Earthquake-Resistant Design",
+        "Transportation & Highway Engineering",
+        "Geotechnical Engineering & Soil Mechanics",
+        "Smart Cities & Urban Planning",
+        "Sustainable & Green Building Technology",
+        "Hydraulics & Water Resource Engineering",
+        "Construction Management & Project Planning",
+        "Environmental Engineering & Waste Management",
+        "Building Information Modeling (BIM)",
+        "Disaster Management & Risk Analysis",
+        "Bridge & Tunnel Engineering",
+        "Surveying & Remote Sensing (GIS & GPS)",
+        "VLSI & Chip Design",
+        "Embedded Systems & Microcontrollers",
+        "Wireless Communication (5G, LTE, Satellite)",
+        "Signal & Image Processing",
+        "Optical Fiber & Photonics",
+        "Digital & Analog Circuit Design",
+        "Antenna & RF Engineering",
+        "Smart Sensors & Wearable Technology",
+        "Audio & Speech Processing",
+        "Biomedical Electronics & Bionics",
+        "MEMS & Nanoelectronics",
+        "Power Systems & Smart Grids",
+        "Renewable Energy (Solar, Wind, Hydro)",
+        "Control Systems & Automation",
+        "Robotics & Mechatronics",
+        "Electric Vehicles (EV) & Battery Technologies",
+        "High Voltage Engineering",
+        "Energy Management & Conservation",
+        "Industrial Instrumentation & Process Control",
+        "Electrical Machines & Drives",
+        "Smart Home & Building Automation",
+        "CAD, CAM & 3D Printing",
+        "Automotive & Aerospace Engineering",
+        "Thermodynamics & Fluid Mechanics",
+        "Mechatronics & Smart Manufacturing",
+        "HVAC & Refrigeration Systems",
+        "Material Science & Composites",
+        "Renewable Energy in Mechanical Systems",
+        "Computational Fluid Dynamics (CFD)",
+        "Finite Element Analysis (FEA)"
+      ]
     }
   ];
 
@@ -137,13 +137,18 @@ export default function FilterSection({ onFilterSubmit }: FilterSectionProps) {
         formattedFilters[title] = Array.from(optionsSet);
       }
     });
-    
-    onFilterSubmit?.(formattedFilters);
+    onFilterSubmit?.(Object.keys(formattedFilters).length > 0 ? formattedFilters : {});
     setIsOpen(false);
   };
 
+  const clearFilters = () => {
+    setSelectedOptions({});
+    setIsOpen(false);
+    onClearFilters?.();
+  };
+
   const selectedCount = Object.values(selectedOptions).reduce(
-    (count, set) => count + set.size, 
+    (count, set) => count + set.size,
     0
   );
 
@@ -165,22 +170,30 @@ export default function FilterSection({ onFilterSubmit }: FilterSectionProps) {
 
           {openDropdowns[filter.title] && (
             <div className="px-4 pb-3 border-t">
-              <div className="pt-2 space-y-2">
-                {filter.options.map((option) => (
-                  <label
-                    key={option}
-                    className="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={isSelected(filter.title, option)}
-                      onChange={() => toggleOption(filter.title, option)}
-                      className="w-4 h-4 border-2 border-gray-300 rounded cursor-pointer focus:ring-2 focus:ring-blue-500 focus:outline-none checked:bg-blue-500 checked:border-blue-500"
-                    />
-                    <span className="text-sm text-gray-700">{option}</span>
-                  </label>
-                ))}
-              </div>
+              {filter.title === "Domain" ? (
+                <DomainFilterOptions
+                  filter={filter}
+                  isSelected={isSelected}
+                  toggleOption={toggleOption}
+                />
+              ) : (
+                <div className="pt-2 space-y-2">
+                  {filter.options.map((option) => (
+                    <label
+                      key={option}
+                      className="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={isSelected(filter.title, option)}
+                        onChange={() => toggleOption(filter.title, option)}
+                        className="w-4 h-4 border-2 border-gray-300 rounded cursor-pointer focus:ring-2 focus:ring-blue-500 focus:outline-none checked:bg-blue-500 checked:border-blue-500"
+                      />
+                      <span className="text-sm text-gray-700">{option}</span>
+                    </label>
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -193,8 +206,62 @@ export default function FilterSection({ onFilterSubmit }: FilterSectionProps) {
         <Filter className="w-5 h-5" />
         <span>Apply Filters {selectedCount > 0 && `(${selectedCount})`}</span>
       </button>
+
+      <button
+        onClick={clearFilters}
+        className="w-full mt-2 px-4 py-3 bg-gray-600 text-white rounded-lg shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 flex items-center justify-center space-x-2 transition-colors"
+      >
+        <X className="w-5 h-5" />
+        <span>Clear Filters</span>
+      </button>
     </div>
   );
+
+  // Domain filter options component with search functionality
+  const DomainFilterOptions = ({
+    filter,
+    isSelected,
+    toggleOption
+  }: {
+    filter: FilterOption;
+    isSelected: (filterTitle: string, option: string) => boolean;
+    toggleOption: (filterTitle: string, option: string) => void;
+  }) => {
+    const [searchTerm, setSearchTerm] = useState("");
+    const filteredOptions = filter.options.filter(option =>
+      option.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    return (
+      <div className="pt-2 space-y-2">
+        <input
+          type="text"
+          placeholder="Search Domain..."
+          className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        {filteredOptions.length > 0 ? (
+          filteredOptions.map((option) => (
+            <label
+              key={option}
+              className="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded"
+            >
+              <input
+                type="checkbox"
+                checked={isSelected(filter.title, option)}
+                onChange={() => toggleOption(filter.title, option)}
+                className="w-4 h-4 border-2 border-gray-300 rounded cursor-pointer focus:ring-2 focus:ring-blue-500 focus:outline-none checked:bg-blue-500 checked:border-blue-500"
+              />
+              <span className="text-sm text-gray-700">{option}</span>
+            </label>
+          ))
+        ) : (
+          <div className="text-sm text-gray-500">No options found.</div>
+        )}
+      </div>
+    );
+  };
 
   return (
     <>
@@ -207,21 +274,17 @@ export default function FilterSection({ onFilterSubmit }: FilterSectionProps) {
       <div className="md:hidden">
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-40 bg-blue-600 text-white rounded-full p-4 shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="fixed bottom-24 right-6 z-40 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full p-4 shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          <Filter className="w-6 h-6" />
+          <Filter className="w-6 h-6 md:mr-2 animate-pulse group-hover:animate-none" />
         </button>
 
-        {/* Modal Overlay */}
         {isOpen && (
           <div className="fixed inset-0 z-50">
-            {/* Background Overlay */}
-            <div 
+            <div
               className="absolute inset-0 bg-black bg-opacity-50"
               onClick={() => setIsOpen(false)}
             />
-            
-            {/* Modal Content */}
             <div className="absolute inset-0 bg-white flex flex-col">
               <div className="flex justify-between items-center p-4 border-b">
                 <h2 className="text-lg font-semibold text-black">Filters</h2>

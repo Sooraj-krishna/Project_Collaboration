@@ -1,0 +1,269 @@
+[
+  {
+    "projectName": "AI Chatbot for Student Queries",
+    "projectDescription": "An AI-powered chatbot for answering common student questions.",
+    "yearOfSubmission": "2025",
+    "projectType": "Final Year Project",
+    "department": "CSE",
+    "domain": "Artificial Intelligence (AI) & Machine Learning (ML)",
+    "customDomain": "",
+    "projectLink": "https://github.com/example/chatbot",
+    "createdAt": "2025-01-15",
+    "members": [
+      {
+        "name": "Alice Johnson",
+        "linkedin": "https://linkedin.com/in/alicejohnson"
+      },
+      {
+        "name": "Bob Smith",
+        "linkedin": "https://linkedin.com/in/bobsmith"
+      }
+    ]
+  },
+  {
+    "projectName": "Secure Online Voting System",
+    "projectDescription": "A blockchain-based online voting system to ensure secure and transparent elections.",
+    "yearOfSubmission": "2024",
+    "projectType": "Research Project",
+    "department": "IT",
+    "domain": "Blockchain & Cryptocurrency",
+    "customDomain": "",
+    "projectLink": "https://github.com/example/secure-voting",
+    "createdAt": "2024-06-10",
+    "members": [
+      {
+        "name": "Charlie Brown",
+        "linkedin": "https://linkedin.com/in/charliebrown"
+      }
+    ]
+  },
+  {
+    "projectName": "IoT Smart Home Automation",
+    "projectDescription": "A smart home system controlled through a mobile app using IoT technology.",
+    "yearOfSubmission": "2023",
+    "projectType": "Mini Project",
+    "department": "ECE",
+    "domain": "Internet of Things (IoT)",
+    "customDomain": "",
+    "projectLink": "https://github.com/example/smart-home",
+    "createdAt": "2023-09-22",
+    "members": [
+      {
+        "name": "David Lee",
+        "linkedin": "https://linkedin.com/in/davidlee"
+      },
+      {
+        "name": "Eve Carter",
+        "linkedin": "https://linkedin.com/in/evecarter"
+      }
+    ]
+  },
+  {
+    "projectName": "Stock Price Prediction using ML",
+    "projectDescription": "Predicting stock prices using historical data and machine learning models.",
+    "yearOfSubmission": "2022",
+    "projectType": "Personal Project",
+    "department": "CSE",
+    "domain": "Data Science & Big Data Analytics",
+    "customDomain": "",
+    "projectLink": "https://github.com/example/stock-prediction",
+    "createdAt": "2022-05-18",
+    "members": [
+      {
+        "name": "Franklin White",
+        "linkedin": "https://linkedin.com/in/franklinwhite"
+      }
+    ]
+  },
+  {
+    "projectName": "E-commerce Website",
+    "projectDescription": "A full-stack e-commerce website built using MERN stack.",
+    "yearOfSubmission": "2021",
+    "projectType": "Final Year Project",
+    "department": "IT",
+    "domain": "Full Stack Development (MERN, MEAN, etc.)",
+    "customDomain": "",
+    "projectLink": "https://github.com/example/ecommerce",
+    "createdAt": "2021-12-03",
+    "members": [
+      {
+        "name": "Grace Kelly",
+        "linkedin": "https://linkedin.com/in/gracekelly"
+      },
+      {
+        "name": "Henry Adams",
+        "linkedin": "https://linkedin.com/in/henryadams"
+      }
+    ]
+  },
+  {
+    "projectName": "Cybersecurity Threat Detection",
+    "projectDescription": "A system to detect cyber threats using AI and data analytics.",
+    "yearOfSubmission": "2025",
+    "projectType": "Research Project",
+    "department": "CSE",
+    "domain": "Cybersecurity & Ethical Hacking",
+    "customDomain": "",
+    "projectLink": "https://github.com/example/cybersecurity-threat-detection",
+    "createdAt": "2025-02-01",
+    "members": [
+      {
+        "name": "Ian Thomas",
+        "linkedin": "https://linkedin.com/in/ianthomas"
+      }
+    ]
+  },
+  {
+    "projectName": "3D Printing for Prosthetics",
+    "projectDescription": "Using 3D printing technology to create affordable prosthetics.",
+    "yearOfSubmission": "2024",
+    "projectType": "Mini Project",
+    "department": "MECH",
+    "domain": "CAD, CAM & 3D Printing",
+    "customDomain": "",
+    "projectLink": "https://github.com/example/3d-prosthetics",
+    "createdAt": "2024-04-12",
+    "members": [
+      {
+        "name": "Jack Wilson",
+        "linkedin": "https://linkedin.com/in/jackwilson"
+      }
+    ]
+  },
+  {
+    "projectName": "AI-Powered Resume Scanner",
+    "projectDescription": "An AI-powered tool to analyze and rank resumes based on job descriptions.",
+    "yearOfSubmission": "2023",
+    "projectType": "Personal Project",
+    "department": "IT",
+    "domain": "Natural Language Processing (NLP)",
+    "customDomain": "",
+    "projectLink": "https://github.com/example/resume-scanner",
+    "createdAt": "2023-07-08",
+    "members": [
+      {
+        "name": "Katie Brown",
+        "linkedin": "https://linkedin.com/in/katiebrown"
+      }
+    ]
+  },
+  {
+    "projectName": "Smart Traffic Light System",
+    "projectDescription": "An AI and IoT-based smart traffic management system.",
+    "yearOfSubmission": "2022",
+    "projectType": "Final Year Project",
+    "department": "EEE",
+    "domain": "Embedded Systems & Microcontrollers",
+    "customDomain": "",
+    "projectLink": "https://github.com/example/smart-traffic",
+    "createdAt": "2022-08-30",
+    "members": [
+      {
+        "name": "Leo Carter",
+        "linkedin": "https://linkedin.com/in/leocarter"
+      }
+    ]
+  },
+  {
+    "projectName": "Health Monitoring Wearable Device",
+    "projectDescription": "A wearable device to monitor heart rate and body temperature in real time.",
+    "yearOfSubmission": "2021",
+    "projectType": "Research Project",
+    "department": "ECE",
+    "domain": "Smart Sensors & Wearable Technology",
+    "customDomain": "",
+    "projectLink": "https://github.com/example/health-monitoring",
+    "createdAt": "2021-11-15",
+    "members": [
+      {
+        "name": "Mia Edwards",
+        "linkedin": "https://linkedin.com/in/miaedwards"
+      }
+    ]
+  },
+  {
+    "projectName": "AI-Based Fake News Detection",
+    "projectDescription": "A machine learning model to detect and filter fake news articles.",
+    "yearOfSubmission": "2025",
+    "projectType": "Personal Project",
+    "department": "CSE",
+    "domain": "Artificial Intelligence (AI) & Machine Learning (ML)",
+    "customDomain": "",
+    "projectLink": "https://github.com/example/fake-news-detector",
+    "createdAt": "2025-01-27",
+    "members": [
+      {
+        "name": "Nathan Green",
+        "linkedin": "https://linkedin.com/in/nathangreen"
+      }
+    ]
+  },
+  {
+    "projectName": "Smart Irrigation System",
+    "projectDescription": "An IoT-based irrigation system for efficient water usage.",
+    "yearOfSubmission": "2024",
+    "projectType": "Final Year Project",
+    "department": "CIVIL",
+    "domain": "Hydraulics & Water Resource Engineering",
+    "customDomain": "",
+    "projectLink": "https://github.com/example/smart-irrigation",
+    "createdAt": "2024-03-29",
+    "members": [
+      {
+        "name": "Olivia Davis",
+        "linkedin": "https://linkedin.com/in/oliviadavis"
+      }
+    ]
+  },
+  {
+    "projectName": "Web APP",
+    "projectDescription": "Web application for image to text generator",
+    "yearOfSubmission": "2024",
+    "projectType": "Others",
+    "department": "",
+    "domain": "Web Development",
+    "customDomain": "",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "Sooraj Krishna",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      }
+    ],
+    "createdAt": "2025-02-22T12:46:43.445Z"
+  },
+  {
+    "projectName": "wqqeq",
+    "projectDescription": "hdkhkhxkchfb",
+    "yearOfSubmission": "2025",
+    "projectType": "Personal Project",
+    "department": "",
+    "domain": "Web Development",
+    "customDomain": "",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "SSA",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      }
+    ],
+    "createdAt": "2025-02-22T13:16:20.264Z"
+  },
+  {
+    "projectName": "asdka,dsm",
+    "projectDescription": "adns,nnd,mn ",
+    "yearOfSubmission": "2025",
+    "projectType": "Personal Project",
+    "department": "",
+    "domain": "sooraj",
+    "customDomain": "",
+    "projectLink": "https://github.com/Sooraj-krishna",
+    "members": [
+      {
+        "name": "SSS",
+        "linkedin": "https://github.com/Sooraj-krishna"
+      }
+    ],
+    "createdAt": "2025-02-22T13:23:02.133Z"
+  }
+]
