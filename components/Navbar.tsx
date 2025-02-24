@@ -22,8 +22,8 @@ const Navbar = () => {
           GecianArchive
         </div>
 
-    
-       
+
+
 
         {/* Repeto Button */}
         <button>
