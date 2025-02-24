@@ -21,10 +21,15 @@ export async function signInWithGoogle(): Promise<{ isAdmin: boolean }> {
     }
 
     // Restrict login to only emails from "gecskp.ac.in"
-    const allowedEmailPattern = /^[a-zA-Z0-9]+@gecskp\.ac\.in$/;
-    if (!allowedEmailPattern.test(user.email)) {
-      throw new Error('Only GEC SKP emails are allowed');
-    }
+    // Restrict login to only emails from "gecskp.ac.in", except for a specific admin email
+const allowedEmailPattern = /^[a-zA-Z0-9]+@gecskp\.ac\.in$/;
+const adminOverrideEmail = "codecompass2024@gmail.com";
+
+if (user.email !== adminOverrideEmail && !allowedEmailPattern.test(user.email)) {
+  throw new Error('Only GEC SKP emails are allowed');
+}
+
+    
 
     const userDocRef = doc(firestore, 'adminemail', user.email);
     const userDoc = await getDoc(userDocRef);
