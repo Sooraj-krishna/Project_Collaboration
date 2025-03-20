@@ -10,10 +10,10 @@ import LoadingScreen from '@/components/loadingScrenn';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("Latest");
-  const [activeFilters, setActiveFilters] = useState<Record<string, string[]>>({});
+  // const [activeFilters, setActiveFilters] = useState<Record<string, string[]>>({});
 
   const handleFilterSubmit = (filters: Record<string, string[]>) => {
-    setActiveFilters(filters);
+    // setActiveFilters(filters);
   };
 
   return (

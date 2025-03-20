@@ -1,18 +1,18 @@
 "use client";
-import { useState } from "react";
+// import { useState } from "react";
 import Link from "next/link";
 
 const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  // const [dropdownOpen, setDropdownOpen] = useState(false);
+  // const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setDropdownOpen((prevState) => !prevState);
-  };
+  // const toggleDropdown = () => {
+  //   setDropdownOpen((prevState) => !prevState);
+  // };
 
-  const toggleMenu = () => {
-    setMenuOpen((prevState) => !prevState);
-  };
+  // const toggleMenu = () => {
+  //   setMenuOpen((prevState) => !prevState);
+  // };
 
   return (
     <nav className="bg-white relative z-50 border-b-2 border-black px-4">
