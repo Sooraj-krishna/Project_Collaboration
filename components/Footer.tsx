@@ -1,13 +1,14 @@
 import { memo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = memo(() => {
   return (
     <footer className="bg-[#27272A] text-gray-200">
       <div className="w-full flex flex-col md:flex-row md:justify-around items-center py-6 border-t border-gray-600 gap-6">
         <div>
-          <img
-            src=""
+          <Image
+            src="/path-to-your-logo.png"
             className="w-32 h-32 object-contain"
             alt="Logo"
             width={128}

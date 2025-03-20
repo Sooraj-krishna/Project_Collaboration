@@ -12,7 +12,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState("Latest");
   // const [activeFilters, setActiveFilters] = useState<Record<string, string[]>>({});
 
-  const handleFilterSubmit = (filters: Record<string, string[]>) => {
+  const handleFilterSubmit = () => {
     // setActiveFilters(filters);
   };
 
