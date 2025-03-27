@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import ProjectGrid from '@/components/repeto/ProjectGrid';
 import FilterSection from '@/components/repeto/FilterSection';
 import TabSection from '@/components/repeto/TabSection';
-import Footer from '@/components/Footer';
+// import Footer from '@/components/Footer';
 import AddProjectFAB from '@/components/repeto/AddProjectFAB';
 import LoadingScreen from "@/components/loadingScrenn";
 
@@ -43,7 +43,7 @@ export default function Home() {
         </div>
         <AddProjectFAB />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

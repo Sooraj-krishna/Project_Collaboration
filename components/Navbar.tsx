@@ -1,18 +1,32 @@
 "use client";
-// import { useState } from "react";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { onAuthStateChanged } from "@/lib/firebase/auth";
+import { signOut, getAuth, User } from "firebase/auth"; // Adjust the import path based on your Firebase setup
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
-  // const [dropdownOpen, setDropdownOpen] = useState(false);
-  // const [menuOpen, setMenuOpen] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
+  const router = useRouter();
 
-  // const toggleDropdown = () => {
-  //   setDropdownOpen((prevState) => !prevState);
-  // };
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged((currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
 
-  // const toggleMenu = () => {
-  //   setMenuOpen((prevState) => !prevState);
-  // };
+  const handleLogout = async () => {
+    try {
+      const auth = getAuth(); // Get the Auth instance
+      await signOut(auth);
+      setUser(null); // Clear user state
+      router.push("/"); // Redirect to home after logout
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  };
 
   return (
     <nav className="bg-white relative z-50 border-b-2 border-black px-4">
@@ -22,17 +36,21 @@ const Navbar = () => {
           GecianArchive
         </div>
 
-
-
-
-        {/* Repeto Button */}
-        <button>
-          <Link href="/repeto">
-            <div className="w-[117px] h-[45px] bg-[#000000] rounded-3xl text-white font-davidLibre flex justify-center items-center text-[15.5px] hover:bg-white drop-shadow-lg hover:text-black">
+        {/* Authentication Button */}
+        {user ? (
+          <button
+            onClick={handleLogout}
+            className="w-[117px] h-[45px] bg-red-600 rounded-3xl text-white font-davidLibre flex justify-center items-center text-[15.5px] hover:bg-red-700 drop-shadow-lg transition"
+          >
+            Logout
+          </button>
+        ) : (
+          <Link href="/login">
+            <div className="w-[117px] h-[45px] bg-[#000000] rounded-3xl text-white font-davidLibre flex justify-center items-center text-[15.5px] hover:bg-white drop-shadow-lg hover:text-black transition">
               Login
             </div>
           </Link>
-        </button>
+        )}
       </div>
     </nav>
   );

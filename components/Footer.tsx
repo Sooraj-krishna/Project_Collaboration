@@ -1,109 +1,59 @@
 import { memo } from "react";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 const Footer = memo(() => {
-  return (
-    <footer className="bg-[#27272A] text-gray-200">
-      <div className="w-full flex flex-col md:flex-row md:justify-around items-center py-6 border-t border-gray-600 gap-6">
-        <div>
-          <Image
-            src="/path-to-your-logo.png"
-            className="w-32 h-32 object-contain"
-            alt="Logo"
-            width={128}
-            height={128}
-          />
-        </div>
-        <nav className="flex gap-6 text-sm md:text-base">
-          <Link href="/" className="hover:text-blue-600 transition-colors">
-            Home
-          </Link>
-          <Link href="/" className="hover:text-blue-600 transition-colors">
-            Contact Us
-          </Link>
-          <Link href="/" className="hover:text-blue-600 transition-colors">
-            Repeto
-          </Link>
-        </nav>
-        <div className="flex flex-row gap-6 lg:gap-10 md:gap-6 items-center justify-start sm:justify-start">
-          <div className="bg-white p-1 rounded-full">
-            <Link href="/">
-              <svg
-                className="w-8 h-8 text-[#27272A] hover:text-[#2761b8]"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
-                  clipRule="evenodd"
+    return (
+        <footer className="w-full bg-white flex flex-col md:flex-row items-center justify-between py-6 px-6 box-border text-base text-gray-600 font-h3 border-t border-gray-200">
+            {/* <div className="flex items-center mb-4 md:mb-0">
+                <Image
+                    src={darsanaLogo}
+                    alt="Darsana Logo"
+                    width={100}
+                    height={40}
+                    objectFit="contain"
                 />
-              </svg>
-            </Link>
-          </div>
-          <div className="bg-white p-1 rounded-full">
-            <Link href="/">
-              <svg
-                className="w-8 h-8 text-[#27272A] hover:text-[#cd2f8b]"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="currentColor"
-                  fillRule="evenodd"
-                  d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </Link>
-          </div>
-          <div className="bg-white p-1 rounded-full">
-            <Link href="/">
-              <svg
-                className="w-8 h-8 text-[#27272A] hover:text-[#2b6be3]"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M22 5.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.343 8.343 0 0 1-2.605.981A4.13 4.13 0 0 0 15.85 4a4.068 4.068 0 0 0-4.1 4.038c0 .31.035.618.105.919A11.705 11.705 0 0 1 3.4 4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 6.1 13.635a4.192 4.192 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 2 18.184 11.732 11.732 0 0 0 8.291 20 11.502 11.502 0 0 0 19.964 8.5c0-.177 0-.349-.012-.523A8.143 8.143 0 0 0 22 5.892Z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </div>
-      <div className="w-full flex flex-col md:flex-row justify-between px-4 items-center py-6 text-sm md:text-base">
-        <div className="flex flex-wrap gap-4 md:gap-10">
-          <Link href="/" className="underline">
-            Privacy Policy
-          </Link>
-          <Link href="/" className="underline">
-            Terms of Service
-          </Link>
-          <Link href="/" className="underline">
-            Cookies Settings
-          </Link>
-        </div>
-        <div>@2024 Code Compass. All rights reserved</div>
-      </div>
-    </footer>
-  );
+            </div> */}
+            <nav className="flex items-center space-x-6 mb-4 md:mb-0">
+                <Link href="/contactUs" className="hover:text-blue-600 transition-colors">
+                     
+                </Link>
+                <Link href="/aboutus" className="hover:text-blue-600 transition-colors">
+                    About Us
+                </Link>
+                <Link href="/chapters" className="hover:text-blue-600 transition-colors">
+                    Chapters
+                </Link>
+                <Link href="/eye-magazine" className="hover:text-blue-600 transition-colors">
+                Made by codecompass coding community
+                </Link>
+            </nav>
+            <div className="flex items-center space-x-4">
+                <Link href="https://www.facebook.com" aria-label="Facebook" className="text-gray-400 hover:text-blue-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                    </svg>
+                </Link>
+                <Link href="https://www.instagram.com" aria-label="Instagram" className="text-gray-400 hover:text-pink-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </Link>
+                <Link href="https://www.youtube.com" aria-label="YouTube" className="text-gray-400 hover:text-red-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                    </svg>
+                </Link>
+                <Link href="https://www.linkedin.com" aria-label="LinkedIn" className="text-gray-400 hover:text-blue-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                    </svg>
+                </Link>
+            </div>
+        </footer>
+    );
 });
-Footer.displayName = "Footer"; 
+
+Footer.displayName = "Footer";
 
 export default Footer;
