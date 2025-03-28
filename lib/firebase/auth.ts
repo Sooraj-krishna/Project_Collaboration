@@ -11,6 +11,8 @@ export function onAuthStateChanged(callback: (authUser: User | null) => void) {
 // Function for Google sign-in and role check
 export async function signInWithGoogle(): Promise<{ isAdmin: boolean }> {
   const provider = new GoogleAuthProvider();
+  provider.setCustomParameters({ display: "popup" }); // Force popup
+
 
   try {
     const result: UserCredential = await signInWithPopup(auth, provider);
