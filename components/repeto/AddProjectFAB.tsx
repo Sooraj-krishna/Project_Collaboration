@@ -1,28 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import {  User } from "firebase/auth"; // Adjust the import path based on your Firebase setup
 import { useRouter } from "next/navigation";
 import { Plus } from "lucide-react";
-import { onAuthStateChanged } from "@/lib/firebase/auth";
 
 const AddProjectFAB = () => {
   const router = useRouter();
-  const [user, setUser] = useState<User | null>(null);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged((currentUser) => {
-      setUser(currentUser);
-    });
-    return () => unsubscribe();
-  }, []);
 
   const handleClick = () => {
-    if (user) {
-      router.push("/add-project");
-    } else {
-      router.push("/login"); // Redirect to login if not authenticated
-    }
+    router.push("/add-project"); // 🚀 No authentication check
   };
 
   return (
