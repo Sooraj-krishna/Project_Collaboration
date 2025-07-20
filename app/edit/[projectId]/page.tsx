@@ -189,6 +189,58 @@ export default function EditProjectPage() {
               className="mt-1 block w-full border border-gray-300 rounded-md p-2 active:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             ></textarea>
           </div>
+          {/* Contact Fields */}
+          <h2 className="text-lg font-semibold mt-6 mb-2">Contact Information (Optional)</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label htmlFor="contactInstagram" className="block text-sm font-medium text-gray-700">Instagram</label>
+              <input
+                type="text"
+                id="contactInstagram"
+                name="contactInstagram"
+                value={project.contactInstagram || ""}
+                onChange={handleChange}
+                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+                placeholder="Instagram username or link"
+              />
+            </div>
+            <div>
+              <label htmlFor="contactLinkedIn" className="block text-sm font-medium text-gray-700">LinkedIn</label>
+              <input
+                type="text"
+                id="contactLinkedIn"
+                name="contactLinkedIn"
+                value={project.contactLinkedIn || ""}
+                onChange={handleChange}
+                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+                placeholder="LinkedIn profile link"
+              />
+            </div>
+            <div>
+              <label htmlFor="contactEmail" className="block text-sm font-medium text-gray-700">Email</label>
+              <input
+                type="email"
+                id="contactEmail"
+                name="contactEmail"
+                value={project.contactEmail || ""}
+                onChange={handleChange}
+                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+                placeholder="Email address"
+              />
+            </div>
+            <div>
+              <label htmlFor="contactWhatsApp" className="block text-sm font-medium text-gray-700">WhatsApp</label>
+              <input
+                type="text"
+                id="contactWhatsApp"
+                name="contactWhatsApp"
+                value={project.contactWhatsApp || ""}
+                onChange={handleChange}
+                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+                placeholder="WhatsApp number"
+              />
+            </div>
+          </div>
           <div>
             <label className="block text-sm font-medium text-gray-700">
               Project Link

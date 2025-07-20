@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CalendarDays, WalletCards, Users, ChevronDown, ChevronUp, Link as LinkIcon } from "lucide-react";
+import { CalendarDays, WalletCards, Users, ChevronDown, ChevronUp, Link as LinkIcon, Mail, Instagram, Linkedin, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { Project } from "@/types/project";
 
@@ -89,7 +89,36 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </div>
           
           {expanded && (
-            <p className="text-gray-800 text-sm mt-4">{project.projectDescription}</p>
+            <>
+              <p className="text-gray-800 text-sm mt-4">{project.projectDescription}</p>
+              {(project.contactInstagram || project.contactLinkedIn || project.contactEmail || project.contactWhatsApp) && (
+                <div className="mt-4">
+                  <h3 className="font-semibold text-blue-700 mb-2">Contact the Project Owner:</h3>
+                  <div className="flex flex-wrap gap-4">
+                    {project.contactInstagram && (
+                      <a href={`https://instagram.com/${project.contactInstagram.replace(/^(https?:\/\/)?(www\.)?instagram\.com\//, '')}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-pink-600 hover:underline">
+                        <Instagram className="w-5 h-5" /> 
+                      </a>
+                    )}
+                    {project.contactLinkedIn && (
+                      <a href={project.contactLinkedIn.startsWith('http') ? project.contactLinkedIn : `https://linkedin.com/in/${project.contactLinkedIn}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-blue-700 hover:underline">
+                        <Linkedin className="w-5 h-5" /> 
+                      </a>
+                    )}
+                    {project.contactEmail && (
+                      <a href={`mailto:${project.contactEmail}`} className="flex items-center gap-1 text-green-700 hover:underline">
+                        <Mail className="w-5 h-5" /> 
+                      </a>
+                    )}
+                    {project.contactWhatsApp && (
+                      <a href={`https://wa.me/${project.contactWhatsApp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-green-600 hover:underline">
+                        <MessageCircle className="w-5 h-5" /> 
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
+            </>
           )}
 
           <div className="mt-4 flex justify-between items-center">
