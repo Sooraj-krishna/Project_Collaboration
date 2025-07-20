@@ -81,7 +81,7 @@ export async function POST(req: NextRequest) {
     console.log('Decoded Firebase UID:', decodedToken.uid);
     const firebaseUid = decodedToken.uid;
 
-    const { projectName, projectDescription, projectLink, createdAt, members, projectCategoryOptions, customDomain } = await req.json();
+    const { projectName, projectDescription, projectLink, createdAt, members, projectCategoryOptions, customDomain, contactInstagram, contactLinkedIn, contactEmail, contactWhatsApp } = await req.json();
 
     console.log('POST /api/projects - Incoming project data:', { projectName, projectDescription, projectCategoryOptions, customDomain });
 
@@ -100,6 +100,10 @@ export async function POST(req: NextRequest) {
       createdAt: new Date(createdAt),
       customDomain: customDomain, // Save customDomain directly
       createdByUid: firebaseUid, // Save the Firebase UID of the user creating the project
+      contactInstagram,
+      contactLinkedIn,
+      contactEmail,
+      contactWhatsApp,
     }).returning({ projectId: projects.projectId });
 
     if (!newProject || !newProject.projectId) {
@@ -169,7 +173,7 @@ export async function POST(req: NextRequest) {
 
 export async function PUT(req: NextRequest) {
   try {
-    const { projectId, projectName, projectDescription, projectLink, createdAt, members, projectCategoryOptions, customDomain } = await req.json();
+    const { projectId, projectName, projectDescription, projectLink, createdAt, members, projectCategoryOptions, customDomain, contactInstagram, contactLinkedIn, contactEmail, contactWhatsApp } = await req.json();
 
     console.log('PUT /api/projects - Incoming project data:', { projectId, projectName, projectDescription, projectCategoryOptions, customDomain });
 
@@ -184,6 +188,10 @@ export async function PUT(req: NextRequest) {
       projectLink,
       createdAt: new Date(createdAt),
       customDomain: customDomain, // Save customDomain directly
+      contactInstagram,
+      contactLinkedIn,
+      contactEmail,
+      contactWhatsApp,
     }).where(eq(projects.projectId, projectId));
 
     console.log('PUT /api/projects - Project details updated.');

@@ -7,6 +7,10 @@ export interface Project {
   createdAt: string;
   customDomain?: string;
   categories?: { categoryName: string; optionName: string }[];
+  contactInstagram?: string;
+  contactLinkedIn?: string;
+  contactEmail?: string;
+  contactWhatsApp?: string;
 
   // ✅ Add this to fix the "any" error in edit page
   selectedCategoryOptions: Record<string, string>;

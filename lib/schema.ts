@@ -31,6 +31,11 @@ export const projects = pgTable("projects", {
   createdAt: timestamp("created_at").defaultNow(),
   createdByUid: varchar("created_by_uid", { length: 255 }),
   customDomain: varchar("custom_domain", { length: 255 }),
+  // New contact fields for collaboration
+  contactInstagram: varchar("contact_instagram", { length: 255 }),
+  contactLinkedIn: varchar("contact_linkedin", { length: 255 }),
+  contactEmail: varchar("contact_email", { length: 255 }),
+  contactWhatsApp: varchar("contact_whatsapp", { length: 255 }),
 }, (table) => ({
   fk_createdBy: foreignKey({
     columns: [table.createdByUid],

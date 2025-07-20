@@ -128,6 +128,7 @@ export async function DELETE(req: NextRequest) {
       return NextResponse.json({ message: "Category ID is required for deletion." }, { status: 400 });
     }
 
+    await db.delete(projectOptions).where(eq(projectOptions.categoryId, categoryId));
     await db.delete(categoryOptionValues).where(eq(categoryOptionValues.categoryId, categoryId));
 
     const [deletedCategory] = await db.delete(categories).where(eq(categories.categoryId, categoryId)).returning();

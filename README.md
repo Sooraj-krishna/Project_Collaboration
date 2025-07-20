@@ -1,82 +1,80 @@
-# ProjectArchive
+# Project Collaboration Platform
 
-**ProjectArchive** is a static website designed for students at  **Engineering College** to showcase their projects. This platform provides students with visibility, helps them secure internships, and allows recruiters to assess their potential.
+## 🚀 Overview
+A modern web platform for students, professionals, and innovators to share project ideas and find collaborators. Users can post their project ideas, specify required skills, and provide contact information (Instagram, LinkedIn, Email, WhatsApp) for interested collaborators to reach out.
 
----
+## 🎯 Purpose
+- Help users find collaborators for their projects.
+- Showcase project ideas and attract interest from the community.
+- Enable easy contact and networking between project owners and interested contributors.
 
-## 🚀 Features
-- 📌 **Centralized Repository** – A dedicated space to store and showcase student projects.
-- 🌍 **Industry Exposure** – Helps students gain recognition and attract recruiters.
-- 🔍 **Recruitment Support** – Enables alumni and hiring managers to find talented students.
-- 💡 **Inspiration & Collaboration** – Encourages students to innovate and collaborate on projects.
+## 🛠️ Features
+- Add project ideas with type, department, technology, description, and more.
+- Optional contact info fields: Instagram, LinkedIn, Email, WhatsApp.
+- Filter and search projects by type, department, technology, etc.
+- View your own projects in your profile.
+- Edit and manage your projects.
+- Secure authentication and user management.
 
----
+## 🌐 Use Cases
+- Students looking for teammates for academic or hobby projects.
+- Professionals seeking collaborators for side projects or startups.
+- Hackathon teams forming around new ideas.
 
-## 📽️ Demo Video
-[![Watch the Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://codecompasss.github.io/project_archive/public/video/demowebsitevideo.mp4)
+## 🏗️ Tech Stack
+- **Frontend:** Next.js, React, Tailwind CSS
+- **Backend:** Next.js API routes, Drizzle ORM, PostgreSQL
+- **Auth:** Firebase Authentication
+- **Database:** PostgreSQL
 
----
+## ⚙️ Setup & Installation
 
-## 🛠️ Tech Stack
-- **Frontend:** HTML, CSS, JavaScript
-- **Hosting:** GitHub Pages
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/project-collaboration.git
+cd project-collaboration
+```
 
----
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-## 👨‍💻 Team Members
-- **Shadil AM**  
-- **Sorraj**  
-- **Abhijith**  
-- **Abhiram**
+### 3. Environment Variables
+Create a `.env.local` file in the root directory and add the following:
+```env
+DATABASE_URL=postgresql://user:password@localhost:5432/yourdb
+NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_firebase_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_firebase_app_id
+FIREBASE_ADMIN_PRIVATE_KEY=your_firebase_admin_private_key
+FIREBASE_ADMIN_CLIENT_EMAIL=your_firebase_admin_client_email
+```
 
----
+### 4. Database Migration & Seeding
+```bash
+npx drizzle-kit push
+npx tsx drizzle/seed.ts
+```
 
-## 🏫 Want to Use This for Your Own College?
+### 5. Run the Development Server
+```bash
+npm run dev
+```
+Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-Absolutely! You can easily **reuse and customize** this project for your own institution or student community:
+## 📦 Project Structure
+- `app/` — Next.js app directory (pages, API routes, components)
+- `components/` — Shared React components
+- `drizzle/` — Database schema, migrations, and seed scripts
+- `lib/` — Utility libraries, database, and Firebase config
+- `types/` — TypeScript types
 
-1. **Fork this repository**  
-   This lets you receive any future updates while keeping your own customizations.
+## 🤝 Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
-2. **Clone your fork locally**  
-   ```bash
-   git clone https://github.com/yourusername/ProjectArchive.git
-   ```
-
-3. **Update Branding**  
-   - Change the **name in the loading screen and navbar** to match your institution.  
-     This can be done in the **`components/` folder**.
-   - Look for `Loading.js`, `Navbar.js`, or similarly named files.
-
-4. **Edit Projects Data**  
-   - All project information is stored in:  
-     ```
-     data/project.json
-     ```
-   - To **add**, **edit**, or **delete** project details, make changes directly in this file.
-
-5. **Deploy with GitHub Pages**  
-   Once you're done customizing, deploy it using GitHub Action:
-   - Go to your repo settings → Pages → select the main branch and `/ (root)` folder.
-
----
-
-## 📜 How to Contribute
-1. Fork the repository.
-2. Clone it: `git clone https://github.com/yourusername/ProjectArchive.git`
-3. Create a new branch: `git checkout -b feature-name`
-4. Make your changes and commit: `git commit -m 'Your Message'`
-5. Push changes: `git push origin feature-name`
-6. Open a Pull Request.
-
----
-
-## 📩 Contact
-For any queries, feel free to reach out:  
-- 📧 Email: [shadilrayyan2@gmail.com]  
-- 🌐 Website: [ProjectArchive](https://codecompasss.github.io/project_archive/)
-
----
-
-✨ *Empowering students by showcasing their projects!*  
-
+## 📄 License
+[MIT](LICENSE) 
