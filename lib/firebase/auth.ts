@@ -1,6 +1,6 @@
 // Import User and other necessary types/functions from Firebase Auth
 import { signInWithPopup, GoogleAuthProvider, User, UserCredential , getAuth } from 'firebase/auth';
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, enableNetwork, disableNetwork } from 'firebase/firestore';
 import { auth, firestore } from './config'; // Ensure you are correctly importing from your Firebase config
 
 // Function to track authentication state changes
@@ -13,8 +13,10 @@ export async function signInWithGoogle(): Promise<{ user:User; isAdmin: boolean 
   const provider = new GoogleAuthProvider();
   provider.setCustomParameters({ display: "popup" }); // Force popup
 
-
   try {
+    // Ensure network is enabled before attempting sign-in
+    await enableNetwork(firestore);
+    
     const result: UserCredential = await signInWithPopup(auth, provider);
     const user: User = result.user;
 
@@ -31,21 +33,23 @@ if (user.email !== adminOverrideEmail && !allowedEmailPattern.test(user.email)) 
   throw new Error('Only GEC SKP emails are allowed');
 }
 
-    
-
+    try {
     const userDocRef = doc(firestore, 'adminemail', user.email);
     const userDoc = await getDoc(userDocRef);
 
     const isAdmin = userDoc.exists() && userDoc.data()?.role === 'admin';
 
     return {user, isAdmin };
+    } catch (firestoreError) {
+      console.error('Error accessing Firestore:', firestoreError);
+      // If Firestore is offline, assume user is not admin for security
+      return {user, isAdmin: false};
+    }
   } catch (error) {
     console.error('Error signing in with Google:', error);
     throw error;
   }
 }
-
-
 
 export async function signOutWithGoogle(): Promise<void> {
   try {

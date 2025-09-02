@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { db } from '../../../lib/db';
 import { projects, teamMembers, projectOptions, categories, categoryOptionValues,users } from '../../../lib/schema';
 import { eq, and, sql } from 'drizzle-orm';
-import { getAuth } from 'firebase-admin/auth';
+import { adminAuth } from '../../../lib/firebase/firebaseadmin';
 import { cookies } from 'next/headers';
 
 
@@ -77,7 +77,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
     }
 
-    const decodedToken = await getAuth().verifyIdToken(token);
+    const decodedToken = await adminAuth.verifyIdToken(token);
     console.log('Decoded Firebase UID:', decodedToken.uid);
     const firebaseUid = decodedToken.uid;
 
