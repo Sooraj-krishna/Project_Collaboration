@@ -11,10 +11,10 @@ try {
 
 if (!admin.apps.length) {
   try {
-    admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount),
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
       projectId: serviceAccount.project_id,
-    });
+  });
     console.log('✅ Firebase Admin initialized successfully');
   } catch (error) {
     console.error('Error initializing Firebase Admin:', error);

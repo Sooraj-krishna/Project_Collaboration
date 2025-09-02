@@ -26,20 +26,20 @@ export async function signInWithGoogle(): Promise<{ user:User; isAdmin: boolean 
 
     // Restrict login to only emails from "gecskp.ac.in"
     // Restrict login to only emails from "gecskp.ac.in", except for a specific admin email
-    const allowedEmailPattern = /^[a-zA-Z0-9]+@gecskp\.ac\.in$/;
-    const adminOverrideEmail = "codecompass2024@gmail.com";
+const allowedEmailPattern = /^[a-zA-Z0-9]+@gecskp\.ac\.in$/;
+const adminOverrideEmail = "codecompass2024@gmail.com";
 
-    if (user.email !== adminOverrideEmail && !allowedEmailPattern.test(user.email)) {
-      throw new Error('Only GEC SKP emails are allowed');
-    }
+if (user.email !== adminOverrideEmail && !allowedEmailPattern.test(user.email)) {
+  throw new Error('Only GEC SKP emails are allowed');
+}
 
     try {
-      const userDocRef = doc(firestore, 'adminemail', user.email);
-      const userDoc = await getDoc(userDocRef);
+    const userDocRef = doc(firestore, 'adminemail', user.email);
+    const userDoc = await getDoc(userDocRef);
 
-      const isAdmin = userDoc.exists() && userDoc.data()?.role === 'admin';
+    const isAdmin = userDoc.exists() && userDoc.data()?.role === 'admin';
 
-      return {user, isAdmin };
+    return {user, isAdmin };
     } catch (firestoreError) {
       console.error('Error accessing Firestore:', firestoreError);
       // If Firestore is offline, assume user is not admin for security
